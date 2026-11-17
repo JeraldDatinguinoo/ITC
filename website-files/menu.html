@@ -1,234 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Kape-ling Cafe menu, including espresso favorites and cold coffee drinks. Find a drink for your next coffee break.">
-    <meta name="theme-color" content="#e8dece">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Kape-ling Cafe">
-    <meta property="og:title" content="Menu | Kape-ling Cafe">
-    <meta property="og:description" content="Explore the Kape-ling Cafe menu, including espresso favorites and cold coffee drinks. Find a drink for your next coffee break.">
-    <meta property="og:url" content="https://kape-ling-cafe.vercel.app/menu">
-    <meta property="og:image" content="https://kape-ling-cafe.vercel.app/logo/913414567_2117884672179343_2522890302276756562_n.jpg">
-    <meta name="twitter:card" content="summary">
-    <link rel="icon" type="image/jpeg" href="/logo/913414567_2117884672179343_2522890302276756562_n.jpg">
-    <title>Menu | Kape-ling Cafe</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
-      <header class="site-header">
-        <div class="header-inner">
-          <a class="brand" href="/" aria-label="Kape-ling Cafe home">
-            <img class="brand-logo" src="/logo/913414567_2117884672179343_2522890302276756562_n.jpg" alt="Kape-ling Cafe logo">
-            <span class="brand-name">Kape-ling <b>Cafe</b>
-              <small>WHERE FRIENDSHIP BREWS</small>
-              </span>
-            </a>
-            <nav class="main-nav" aria-label="Main navigation">
-              <a href="/" >Home</a>
-                <a href="/about" >About</a>
-                  <a href="/menu" aria-current="page" class="active">Menu</a>
-                    <a href="/community" >Community</a>
-                      <a href="/contact" >Contact</a>
-                      </nav>
-                    </div>
-                  </header>
-                  <main>
-                    <section class="page-intro menu-intro">
-                      <p class="eyebrow">MADE FOR YOUR COFFEE BREAK</p>
-                        <h1>Something good<br>
-                          <em>is brewing.</em>
-                          </h1>
-                          <p>From familiar favorites to something a little different, find the cup that fits your day.</p>
-                          </section>
-                          <section class="menu-section section-wrap">
-                            <div class="menu-toolbar">
-                              <div>
-                                <p class="eyebrow">THE KAPE-LING MENU</p>
-                                  <h2>Take your pick.</h2>
-                                  </div>
-                                  <p>12 DRINKS · SAMPLE PRICES</p>
-                                  </div>
-                                  <div class="menu-filters" role="group" aria-label="Filter drinks">
-                                    <button class="filter-button active" data-filter="all" aria-pressed="true">All drinks</button>
-                                      <button class="filter-button" data-filter="hot" aria-pressed="false">Hot coffee</button>
-                                        <button class="filter-button" data-filter="cold" aria-pressed="false">Cold coffee</button>
-                                          <button class="filter-button" data-filter="black" aria-pressed="false">Black coffee</button>
-                                            <button class="filter-button" data-filter="specialty" aria-pressed="false">Specialty</button>
-                                            </div>
-                                            <div class="menu-grid" id="menuGrid">
-                                              <article class="menu-card" data-category="cold">
-                                                <div class="menu-photo drink-photo-1" role="img" aria-label="Caramel Latte coffee">
-                                                </div>
-                                                <div class="menu-card-copy">
-                                                  <div class="menu-card-meta">
-                                                    <span>COLD COFFEE</span>
-                                                      <b>₱120</b>
-                                                      </div>
-                                                      <h3>Caramel Latte</h3>
-                                                        <p>A smooth espresso blend with creamy milk and a sweet caramel finish.</p>
-                                                        </div>
-                                                      </article>
-                                                      <article class="menu-card" data-category="cold">
-                                                        <div class="menu-photo drink-photo-2" role="img" aria-label="Iced Americano coffee">
-                                                        </div>
-                                                        <div class="menu-card-copy">
-                                                          <div class="menu-card-meta">
-                                                            <span>COLD COFFEE</span>
-                                                              <b>₱95</b>
-                                                              </div>
-                                                              <h3>Iced Americano</h3>
-                                                                <p>Bold espresso softened with cool water and ice. Clean, refreshing, and full of character.</p>
-                                                                </div>
-                                                              </article>
-                                                              <article class="menu-card" data-category="hot">
-                                                                <div class="menu-photo drink-photo-3" role="img" aria-label="Cappuccino coffee">
-                                                                </div>
-                                                                <div class="menu-card-copy">
-                                                                  <div class="menu-card-meta">
-                                                                    <span>HOT COFFEE</span>
-                                                                      <b>₱110</b>
-                                                                      </div>
-                                                                      <h3>Cappuccino</h3>
-                                                                        <p>A rich espresso base topped with silky steamed milk and a soft cloud of foam.</p>
-                                                                        </div>
-                                                                      </article>
-                                                                      <article class="menu-card" data-category="cold">
-                                                                        <div class="menu-photo drink-photo-4" role="img" aria-label="Iced Mocha coffee">
-                                                                        </div>
-                                                                        <div class="menu-card-copy">
-                                                                          <div class="menu-card-meta">
-                                                                            <span>COLD COFFEE</span>
-                                                                              <b>₱125</b>
-                                                                              </div>
-                                                                              <h3>Iced Mocha</h3>
-                                                                                <p>Espresso, chocolate, and milk come together in a smooth, chilled favorite.</p>
-                                                                                </div>
-                                                                              </article>
-                                                                              <article class="menu-card" data-category="hot">
-                                                                                <div class="menu-photo drink-photo-5" role="img" aria-label="Cafe Latte coffee">
-                                                                                </div>
-                                                                                <div class="menu-card-copy">
-                                                                                  <div class="menu-card-meta">
-                                                                                    <span>HOT COFFEE</span>
-                                                                                      <b>₱115</b>
-                                                                                      </div>
-                                                                                      <h3>Cafe Latte</h3>
-                                                                                        <p>Fresh espresso and steamed milk for a mellow, creamy everyday coffee.</p>
-                                                                                        </div>
-                                                                                      </article>
-                                                                                      <article class="menu-card" data-category="hot">
-                                                                                        <div class="menu-photo drink-photo-6" role="img" aria-label="Vanilla Latte coffee">
-                                                                                        </div>
-                                                                                        <div class="menu-card-copy">
-                                                                                          <div class="menu-card-meta">
-                                                                                            <span>HOT COFFEE</span>
-                                                                                              <b>₱130</b>
-                                                                                              </div>
-                                                                                              <h3>Vanilla Latte</h3>
-                                                                                                <p>A comforting latte with gentle vanilla sweetness and a smooth espresso finish.</p>
-                                                                                                </div>
-                                                                                              </article>
-                                                                                              <article class="menu-card" data-category="black">
-                                                                                                <div class="menu-photo drink-photo-7" role="img" aria-label="Classic Cold Brew coffee">
-                                                                                                </div>
-                                                                                                <div class="menu-card-copy">
-                                                                                                  <div class="menu-card-meta">
-                                                                                                    <span>BLACK COFFEE</span>
-                                                                                                      <b>₱115</b>
-                                                                                                      </div>
-                                                                                                      <h3>Classic Cold Brew</h3>
-                                                                                                        <p>Slow-steeped coffee served chilled for a naturally smooth, bold taste.</p>
-                                                                                                        </div>
-                                                                                                      </article>
-                                                                                                      <article class="menu-card" data-category="black">
-                                                                                                        <div class="menu-photo drink-photo-8" role="img" aria-label="Espresso coffee">
-                                                                                                        </div>
-                                                                                                        <div class="menu-card-copy">
-                                                                                                          <div class="menu-card-meta">
-                                                                                                            <span>BLACK COFFEE</span>
-                                                                                                              <b>₱75</b>
-                                                                                                              </div>
-                                                                                                              <h3>Espresso</h3>
-                                                                                                                <p>A concentrated shot of rich coffee with a deep aroma and bold finish.</p>
-                                                                                                                </div>
-                                                                                                              </article>
-                                                                                                              <article class="menu-card" data-category="specialty">
-                                                                                                                <div class="menu-photo drink-photo-9" role="img" aria-label="Spanish Latte coffee">
-                                                                                                                </div>
-                                                                                                                <div class="menu-card-copy">
-                                                                                                                  <div class="menu-card-meta">
-                                                                                                                    <span>SPECIALTY</span>
-                                                                                                                      <b>₱135</b>
-                                                                                                                      </div>
-                                                                                                                      <h3>Spanish Latte</h3>
-                                                                                                                        <p>Espresso and creamy milk with a touch of sweet condensed milk.</p>
-                                                                                                                        </div>
-                                                                                                                      </article>
-                                                                                                                      <article class="menu-card" data-category="specialty">
-                                                                                                                        <div class="menu-photo drink-photo-10" role="img" aria-label="Hazelnut Mocha coffee">
-                                                                                                                        </div>
-                                                                                                                        <div class="menu-card-copy">
-                                                                                                                          <div class="menu-card-meta">
-                                                                                                                            <span>SPECIALTY</span>
-                                                                                                                              <b>₱140</b>
-                                                                                                                              </div>
-                                                                                                                              <h3>Hazelnut Mocha</h3>
-                                                                                                                                <p>Chocolate, espresso, and nutty hazelnut notes blended into one indulgent cup.</p>
-                                                                                                                                </div>
-                                                                                                                              </article>
-                                                                                                                              <article class="menu-card" data-category="specialty">
-                                                                                                                                <div class="menu-photo drink-photo-11" role="img" aria-label="Brown Sugar Shaken Espresso coffee">
-                                                                                                                                </div>
-                                                                                                                                <div class="menu-card-copy">
-                                                                                                                                  <div class="menu-card-meta">
-                                                                                                                                    <span>SPECIALTY</span>
-                                                                                                                                      <b>₱135</b>
-                                                                                                                                      </div>
-                                                                                                                                      <h3>Brown Sugar Shaken Espresso</h3>
-                                                                                                                                        <p>Espresso shaken over ice with brown sugar for a lively, lightly sweet coffee.</p>
-                                                                                                                                        </div>
-                                                                                                                                      </article>
-                                                                                                                                      <article class="menu-card" data-category="cold">
-                                                                                                                                        <div class="menu-photo drink-photo-12" role="img" aria-label="Iced Vanilla Cold Brew coffee">
-                                                                                                                                        </div>
-                                                                                                                                        <div class="menu-card-copy">
-                                                                                                                                          <div class="menu-card-meta">
-                                                                                                                                            <span>COLD COFFEE</span>
-                                                                                                                                              <b>₱130</b>
-                                                                                                                                              </div>
-                                                                                                                                              <h3>Iced Vanilla Cold Brew</h3>
-                                                                                                                                                <p>Smooth cold brew with a soft vanilla finish, served chilled over ice.</p>
-                                                                                                                                                </div>
-                                                                                                                                              </article>
-                                                                                                                                            </div>
-                                                                                                                                            <p class="menu-note">Prices shown are sample prices and may be updated to match the final cafe menu.</p>
-                                                                                                                                            </section>
-                                                                                                                                          </main>
-                                                                                                                                          <script>
-                                                                                                                                            const filters=[...document.querySelectorAll('.filter-button')];const cards=[...document.querySelectorAll('.menu-card')];
-                                                                                                                                            filters.forEach(button=>button.addEventListener('click',()=>{const filter=button.dataset.filter;filters.forEach(item=>{const active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active));});cards.forEach(card=>card.hidden=filter!=='all'&&card.dataset.category!==filter);}));
-                                                                                                                                          </script>
-                                                                                                                                          <footer class="site-footer">
-                                                                                                                                            <div class="footer-inner">
-                                                                                                                                              <div>
-                                                                                                                                                <a class="footer-brand" href="/">Kape-ling Cafe</a>
-                                                                                                                                                  <p>24 P. Burgos Street, Poblacion, Batangas City, Batangas</p>
-                                                                                                                                                    <p>Mon–Sat 8:00 AM–9:00 PM · Sun 9:00 AM–7:00 PM</p>
-                                                                                                                                                    </div>
-                                                                                                                                                    <div class="footer-links">
-                                                                                                                                                      <a href="/about">About</a>
-                                                                                                                                                        <a href="/menu">Menu</a>
-                                                                                                                                                          <a href="/community">Community</a>
-                                                                                                                                                            <a href="/contact">Contact</a>
-                                                                                                                                                              <a href="https://www.google.com/maps/search/?api=1&query=24+P.+Burgos+Street%2C+Poblacion%2C+Batangas+City%2C+Batangas" target="_blank" rel="noopener">Map ↗</a>
-                                                                                                                                                              </div>
-                                                                                                                                                              <small>© 2026 Kape-ling Cafe</small>
-                                                                                                                                                              </div>
-                                                                                                                                                            </footer>
-                                                                                                                                                          </body>
-                                                                                                                                                        </html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse sample Kape-ling Cafe drinks, sizes, add-ons, and seasonal specials. All menu details and prices are examples for a student website concept.">
+  <meta name="theme-color" content="#f1eadf">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kape-ling Cafe">
+  <meta property="og:title" content="Menu | Kape-ling Cafe">
+  <meta property="og:description" content="Browse sample Kape-ling Cafe drinks, sizes, add-ons, and seasonal specials. All menu details and prices are examples for a student website concept.">
+  <meta property="og:url" content="https://kape-ling-cafe.vercel.app/menu">
+  <meta property="og:image" content="https://kape-ling-cafe.vercel.app/logo/913414567_2117884672179343_2522890302276756562_n.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/jpeg" href="/logo/913414567_2117884672179343_2522890302276756562_n.jpg">
+  <title>Menu | Kape-ling Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Kape-ling Cafe home">
+      <img class="brand-logo" src="/logo/913414567_2117884672179343_2522890302276756562_n.jpg" alt="">
+      <span class="brand-name">Kape-ling <b>Cafe</b><small>COFFEE · BATANGAS CITY</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/" >Home</a>
+      <a href="/about" >About</a>
+      <a href="/menu" aria-current="page">Menu</a>
+      <a href="/community" >Community</a>
+      <a href="/contact" >Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-intro menu-intro"><p class="eyebrow">THE COUNTER MENU</p><h1>Pick your usual.<br><em>Or try something new.</em></h1><p>Espresso classics, iced favorites, and a couple of sweeter things. Prices and availability are sample details for this concept.</p></section>
+  <section class="menu-section section-wrap">
+    <div class="menu-toolbar"><div><p class="eyebrow">MADE TO ORDER</p><h2>Drinks on the board</h2></div><p>8 SAMPLE DRINKS · PRICES IN PHP</p></div>
+    <div class="menu-filters" role="group" aria-label="Filter drinks">
+      <button class="filter-button active" data-filter="all" aria-pressed="true">Everything</button><button class="filter-button" data-filter="hot" aria-pressed="false">Hot</button><button class="filter-button" data-filter="cold" aria-pressed="false">Iced</button><button class="filter-button" data-filter="black" aria-pressed="false">No milk</button><button class="filter-button" data-filter="special" aria-pressed="false">A little extra</button>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+      <article class="menu-card" data-category="cold"><div class="menu-photo drink-photo-1" role="img" aria-label="Caramel latte"></div><div class="menu-card-copy"><div class="menu-card-meta"><span>ICED · MILK</span><b>₱120</b></div><h3>Caramel Latte</h3><p>Espresso, milk, and caramel. Sweet, but still tastes like coffee.</p><div class="menu-detail"><span>12 oz ₱120</span><span>16 oz ₱140</span></div></div></article>
+      <article class="menu-card" data-category="black cold"><div class="menu-photo drink-photo-2" role="img" aria-label="Iced Americano"></div><div class="menu-card-copy"><div class="menu-card-meta"><span>ICED · NO MILK</span><b>₱95</b></div><h3>Iced Americano</h3><p>Espresso, cold water, and ice. No milk, no fuss.</p><div class="menu-detail"><span>12 oz ₱95</span><span>16 oz ₱115</span></div></div></article>
+      <article class="menu-card" data-category="hot"><div class="menu-photo drink-photo-3" role="img" aria-label="Cappuccino"></div><div class="menu-card-copy"><div class="menu-card-meta"><span>HOT · MILK</span><b>₱110</b></div><h3>Cappuccino</h3><p>A double shot with steamed milk and a thick layer of foam.</p><div class="menu-detail"><span>8 oz ₱110</span><span>12 oz ₱125</span></div></div></article>
+      <article class="menu-card" data-category="cold"><div class="menu-photo drink-photo-4" role="img" aria-label="Iced mocha"></div><div class="menu-card-copy"><div class="menu-card-meta"><span>ICED · MILK</span><b>₱125</b></div><h3>Iced Mocha</h3><p>Espresso and chocolate with cold milk. A good one for sweet cravings.</p><div class="menu-detail"><span>12 oz ₱125</span><span>16 oz ₱145</span></div></div></article>
+      <article class="menu-card" data-category="hot"><div class="menu-photo drink-photo-5" role="img" aria-label="Cafe latte"></div><div class="menu-card-copy"><div class="menu-card-meta"><span>HOT · MILK</span><b>₱115</b></div><h3>Cafe Latte</h3><p>Espresso with steamed milk. Simple, soft, and easy to enjoy.</p><div class="menu-detail"><span>8 oz ₱115</span><span>12 oz ₱130</span></div></div></article>
+      <article class="menu-card" data-category="black cold"><div class="menu-photo drink-photo-7" role="img" aria-label="Classic cold brew"></div><div class="menu-card-copy"><div class="menu-card-meta"><span>COLD BREW · NO MILK</span><b>₱115</b></div><h3>Classic Cold Brew</h3><p>Coarse-ground coffee steeped slowly in cold water. Smooth and bold.</p><div class="menu-detail"><span>12 oz ₱115</span><span>16 oz ₱135</span></div></div></article>
+      <article class="menu-card" data-category="special hot"><div class="menu-photo drink-photo-9" role="img" aria-label="Spanish latte"></div><div class="menu-card-copy"><div class="menu-card-meta"><span>HOUSE FAVORITE · HOT OR ICED</span><b>₱135</b></div><h3>Spanish Latte</h3><p>Espresso, milk, and condensed milk. Richer and sweeter than a regular latte.</p><div class="menu-detail"><span>12 oz ₱135</span><span>16 oz ₱155</span></div></div></article>
+      <article class="menu-card" data-category="special cold"><div class="menu-photo drink-photo-11" role="img" aria-label="Brown sugar shaken espresso"></div><div class="menu-card-copy"><div class="menu-card-meta"><span>SEASONAL PICK</span><b>₱135</b></div><h3>Brown Sugar Shaken Espresso</h3><p>Espresso shaken hard with brown sugar and ice. Limited sample feature.</p><div class="menu-detail"><span>16 oz only · ₱135</span><span class="availability">Sample feature</span></div></div></article>
+    </div>
+    <aside class="menu-extras"><div><p class="eyebrow">MAKE IT YOURS</p><h3>A few small changes.</h3><p>Extra espresso shot <strong>+₱30</strong><br>Oat milk <strong>+₱30</strong><br>Vanilla or caramel syrup <strong>+₱20</strong></p></div><div><p class="eyebrow">A QUICK HEADS-UP</p><p>Sizes, add-ons, prices, and seasonal availability are sample menu details. Ask the counter about ingredients and allergens before ordering.</p></div></aside>
+  </section>
+</main>
+<script>
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const drinkCards = document.querySelectorAll(".menu-card");
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selected = button.dataset.filter;
+      filterButtons.forEach((item) => {
+        const isActive = item === button;
+        item.classList.toggle("active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+      drinkCards.forEach((card) => {
+        const categories = card.dataset.category.split(" ");
+        card.hidden = selected !== "all" && !categories.includes(selected);
+      });
+    });
+  });
+</script>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="footer-brand" href="/">Kape-ling Cafe</a>
+      <p>24 P. Burgos Street, Poblacion, Batangas City, Batangas</p>
+      <p>Mon–Sat 8:00 AM–9:00 PM · Sun 9:00 AM–7:00 PM</p>
+      <p class="concept-note">Student website concept. Business details are examples, not verified operating information.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about">About</a><a href="/menu">Menu</a><a href="/community">Community</a><a href="/contact">Contact</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=24+P.+Burgos+Street%2C+Poblacion%2C+Batangas+City%2C+Batangas" target="_blank" rel="noopener">Map ↗</a>
+    </div>
+    <small>© 2026 Kape-ling Cafe · Concept website</small>
+  </div>
+</footer>
+</body></html>
