@@ -2277,3 +2277,50 @@ textarea:focus-visible {
     transition:none !important;
   }
 }
+
+
+/* Header contrast and navigation readability */
+.site-header {
+  background:#e8dece;
+  color:#241811;
+  opacity:1;
+}
+
+.site-header .brand-name,
+.site-header .brand-name b,
+.site-header .brand-name small {
+  color:#241811;
+  opacity:1;
+}
+
+.site-header .brand-name small {
+  color:#6b503c;
+  font-weight:700;
+}
+
+.site-header .main-nav a,
+.site-header .main-nav a:visited {
+  color:#402b20;
+  opacity:1;
+  font-size:14px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.site-header .main-nav a:hover,
+.site-header .main-nav a[aria-current="page"] {
+  color:#8a542f;
+}
+
+.site-header .main-nav a:focus-visible {
+  color:#241811;
+  outline:2px solid #8a542f;
+  outline-offset:4px;
+}
+
+@media(max-width:800px) {
+  .site-header .main-nav a,
+  .site-header .main-nav a:visited {
+    font-size:13px;
+  }
+}
