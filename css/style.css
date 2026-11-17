@@ -43,3 +43,49 @@
 @media(prefers-reduced-motion:reduce){
   .nav-preview,.nav-chevron,.drink-photo:after{transition:none}
 }
+
+
+/* Kape-ling Cafe palette: cream, caramel, warm brown, deep espresso */
+:root{
+  --cream:#FFF8F0;
+  --paper:#FFF8F0;
+  --caramel:#C08552;
+  --brown:#8C5A3C;
+  --deep:#4B2E2B;
+  --muted:#76594B;
+  --line:#E8D5C5;
+  --white:#FFFCF8;
+}
+body{background:var(--paper);color:var(--deep)}
+.site-header{background:var(--paper)}
+.brand,.intro-section h2,.story-text h2,.contact-copy h2,.feature-card h3,.purpose-grid h2,.section-heading h2,.menu-info h3,.review-card p{color:var(--brown)}
+.brand-mark{border-color:var(--caramel);color:var(--caramel)}
+.main-nav a{color:var(--muted)}
+.main-nav a:hover,.main-nav a.active{color:var(--deep)}
+.main-nav a.active{border-color:var(--caramel)}
+.eyebrow,.menu-info strong,.menu-tag,.stars,.contact-detail small,.contact-detail>span{color:var(--caramel)}
+.hero h1 em,.page-hero h1 em,h2 em{color:#E0B58F}
+.button-light{background:var(--cream);color:var(--deep)}
+.button-dark{background:var(--deep);color:var(--cream)}
+.feature-card,.review-card,.contact-form{background:#F5E9DC;border-color:var(--line)}
+.cta-band,.purpose-section{background:#F1E3D5}
+.site-footer{background:var(--deep);color:var(--cream)}
+.site-footer p,.site-footer div a{color:#E8D5C5}
+.page-hero{background:#F5E9DC}
+.menu-card{background:var(--white);border-color:var(--line)}
+.purpose-grid article{border-color:#D9BFA9}
+.contact-form input,.contact-form textarea{background:var(--white);border-color:#D9BFA9}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--caramel)}
+.nav-preview{background:var(--white);border-color:var(--line)}
+.nav-preview-copy h3{color:var(--brown)}
+.nav-preview-copy .eyebrow,.nav-preview-cta{color:var(--caramel)}
+
+/* Each menu card changes to another photo of the same drink category */
+.drink-one{background-image:url("https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=85")}
+.drink-one:after{background-image:url("https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=85")}
+.drink-two{background-image:url("https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=85")}
+.drink-two:after{background-image:url("https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=85")}
+.drink-three{background-image:url("https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=900&q=85")}
+.drink-three:after{background-image:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85")}
+.drink-four{background-image:url("https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=85")}
+.drink-four:after{background-image:url("https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=85")}
