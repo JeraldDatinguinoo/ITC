@@ -39,17 +39,17 @@ h1 em,h2 em{color:#9a6942}
 .quote-section p{color:#402b20}
 @media(max-width:560px){.home-hero{background:#d9c8b2}}
 
-/* One unique image per drink; chosen to match the drink style */
-.drink-photo-1{background-image:url("https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-2{background-image:url("https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-3{background-image:url("https://images.unsplash.com/photo-1545271428-47057449c00c?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-4{background-image:url("https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-5{background-image:url("https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-6{background-image:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-7{background-image:url("https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-8{background-image:url("https://images.unsplash.com/photo-1614630536847-a8c0bd1aa079?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-9{background-image:url("https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-10{background-image:url("https://images.unsplash.com/photo-1669872484166-e11b9638b50e?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-11{background-image:url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=88")}
-.drink-photo-12{background-image:url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=88")}
+/* Unique menu photography from Pexels (one distinct photo per drink) */
+.drink-photo-1{background-image:url("https://images.pexels.com/photos/6769487/pexels-photo-6769487.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-2{background-image:url("https://images.pexels.com/photos/8736395/pexels-photo-8736395.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-3{background-image:url("https://images.pexels.com/photos/27524210/pexels-photo-27524210.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-4{background-image:url("https://images.pexels.com/photos/17506134/pexels-photo-17506134.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-5{background-image:url("https://images.pexels.com/photos/20884081/pexels-photo-20884081.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-6{background-image:url("https://images.pexels.com/photos/18110739/pexels-photo-18110739.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-7{background-image:url("https://images.pexels.com/photos/8736396/pexels-photo-8736396.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-8{background-image:url("https://images.pexels.com/photos/15800367/pexels-photo-15800367.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-9{background-image:url("https://images.pexels.com/photos/31113765/pexels-photo-31113765.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-10{background-image:url("https://images.pexels.com/photos/20066340/pexels-photo-20066340.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-11{background-image:url("https://images.pexels.com/photos/5246890/pexels-photo-5246890.jpeg?auto=compress&cs=tinysrgb&w=900")}
+.drink-photo-12{background-image:url("https://images.pexels.com/photos/34612059/pexels-photo-34612059.jpeg?auto=compress&cs=tinysrgb&w=900")}
 .menu-photo{background-position:center;background-size:cover;filter:saturate(.84) sepia(.08)}
