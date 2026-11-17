@@ -53,3 +53,26 @@ h1 em,h2 em{color:#9a6942}
 .drink-photo-11{background-image:url("https://images.pexels.com/photos/13549430/pexels-photo-13549430.jpeg?auto=compress&cs=tinysrgb&w=900")}
 .drink-photo-12{background-image:url("https://images.pexels.com/photos/34046801/pexels-photo-34046801.jpeg?auto=compress&cs=tinysrgb&w=900")}
 .menu-photo{background-position:center;background-size:cover;filter:saturate(.84) sepia(.08)}
+
+
+/* Dark header panel: match the footer for a balanced coffeehouse frame */
+.site-header{background:#241811;border-bottom:1px solid rgba(232,222,206,.16)}
+.brand,.brand-name{color:#eee4d6}
+.brand-name b{color:#c08b5d}
+.brand-name small{color:#bda994}
+.brand-mark{border-color:#c08b5d;color:#d5a477}
+.main-nav a{color:#d0beaa}
+.main-nav a:hover,.main-nav a.active{color:#fff4e6}
+.main-nav a.active:after,.main-nav a:hover:after{background:#c08b5d}
+
+/* Community testimonials: separate cards with stronger contrast and spacing */
+.reviews-section{background:#d2bea6;padding:82px 0 90px}
+.reviews-section h2{color:#352319;margin-bottom:34px}
+.review-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px}
+.review-grid article{background:#f0e6d8;border:1px solid #bda58b;border-top:3px solid #9a6942;border-radius:3px;padding:24px 24px 22px;min-height:220px;box-shadow:0 8px 22px rgba(36,24,17,.07);display:flex;flex-direction:column}
+.review-grid article>span{font:700 10px var(--sans);letter-spacing:1.8px;color:#95633c}
+.review-grid article p{font:600 21px/1.45 var(--serif);color:#352319;margin:20px 0 22px;flex:1}
+.review-grid article small{font-size:10px;line-height:1.5;color:#66513f;border-top:1px solid #d5c2ad;padding-top:12px}
+.reviews-section .small-note{color:#65513f;font-size:10px;margin-top:24px}
+@media(max-width:800px){.review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.review-grid{grid-template-columns:1fr;gap:16px}.review-grid article{min-height:0;padding:22px}.review-grid article p{font-size:21px}.reviews-section{padding:62px 0 70px}}
