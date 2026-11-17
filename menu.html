@@ -4,56 +4,98 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu | Kape-ling Cafe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">K</span><span>Kape-ling <b>Cafe</b><small>WHERE FRIENDSHIP BREWS</small></span></a><nav class="main-nav" aria-label="Main navigation">
-      <div class="nav-item">
-        <a href="index.html">Home<span class="nav-chevron" aria-hidden="true">⌄</span></a>
-        <div class="nav-preview">
-          <div class="nav-preview-image nav-home" aria-hidden="true"></div>
-          <div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>A warm welcome</h3><p>Discover the cafe, its atmosphere, and what makes every visit feel special.</p><span class="nav-preview-cta">View Home <b>→</b></span></div>
-        </div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">K</span><span>Kape-ling <b>Cafe</b><small>WHERE FRIENDSHIP BREWS</small></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-item"><a href="index.html">Home<span class="nav-chevron" aria-hidden="true">⌄</span></a><div class="nav-preview"><div class="nav-preview-image nav-home"></div><div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>A warm welcome</h3><p>Discover the cafe, its atmosphere, and what makes every visit feel special.</p><span class="nav-preview-cta">View Home →</span></div></div></div>
+      <div class="nav-item"><a href="about.html">About<span class="nav-chevron" aria-hidden="true">⌄</span></a><div class="nav-preview"><div class="nav-preview-image nav-about"></div><div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>The story behind the cup</h3><p>Learn about our idea, mission, vision, and values.</p><span class="nav-preview-cta">View About →</span></div></div></div>
+      <div class="nav-item current"><a class="active" href="menu.html">Menu<span class="nav-chevron" aria-hidden="true">⌄</span></a><div class="nav-preview"><div class="nav-preview-image nav-menu"></div><div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>Find your next favorite</h3><p>Explore the drinks made for every kind of day.</p><span class="nav-preview-cta">View Menu →</span></div></div></div>
+      <div class="nav-item"><a href="community.html">Community<span class="nav-chevron" aria-hidden="true">⌄</span></a><div class="nav-preview"><div class="nav-preview-image nav-community"></div><div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>Made for connection</h3><p>Explore guest moments and what makes the cafe welcoming.</p><span class="nav-preview-cta">View Community →</span></div></div></div>
+      <div class="nav-item"><a href="contact.html">Contact<span class="nav-chevron" aria-hidden="true">⌄</span></a><div class="nav-preview"><div class="nav-preview-image nav-contact"></div><div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>Let's talk</h3><p>Find our contact details and send us a message.</p><span class="nav-preview-cta">View Contact →</span></div></div></div>
+    </nav>
+  </header>
+
+  <main class="immersive-menu">
+    <section class="menu-showcase" aria-live="polite">
+      <div class="showcase-copy">
+        <p class="eyebrow">A LITTLE SOMETHING TO LOVE</p>
+        <p class="showcase-count" id="drinkCount">01 / 04</p>
+        <h1 id="drinkName">Caramel<br><em>Latte.</em></h1>
+        <p class="showcase-description" id="drinkDescription">A smooth espresso blend with creamy milk and a sweet caramel finish. Your cozy pick-me-up, served over ice.</p>
+        <div class="showcase-bottom"><span class="showcase-price" id="drinkPrice">₱120</span><span class="showcase-note">MADE TO BRING PEOPLE CLOSER</span></div>
       </div>
-      <div class="nav-item">
-        <a href="about.html">About<span class="nav-chevron" aria-hidden="true">⌄</span></a>
-        <div class="nav-preview">
-          <div class="nav-preview-image nav-about" aria-hidden="true"></div>
-          <div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>The story behind the cup</h3><p>Learn about our idea, mission, vision, and values.</p><span class="nav-preview-cta">View About <b>→</b></span></div>
+
+      <div class="product-stage">
+        <div class="stage-glow"></div>
+        <span class="stage-caption">KAPE-LING SIGNATURE</span>
+        <div class="product-shadow"></div>
+        <div class="drink-object caramel-cup" id="drinkObject" role="img" aria-label="3D-style caramel latte in a clear takeaway cup">
+          <div class="cup-lid"></div><div class="cup-body"><div class="cup-liquid"></div><div class="cup-ice ice-a"></div><div class="cup-ice ice-b"></div><div class="cup-ice ice-c"></div><div class="cup-foam"></div><div class="cup-sleeve"><span>K</span></div><div class="cup-highlight"></div></div><div class="cup-bottom"></div>
         </div>
+        <span class="stage-orbit orbit-one"></span><span class="stage-orbit orbit-two"></span>
+        <p class="stage-hint">HOVER TO ROTATE <span>↻</span></p>
       </div>
-      <div class="nav-item current">
-        <a class="active" href="menu.html">Menu<span class="nav-chevron" aria-hidden="true">⌄</span></a>
-        <div class="nav-preview">
-          <div class="nav-preview-image nav-menu" aria-hidden="true"></div>
-          <div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>Find your next favorite</h3><p>Browse featured coffee drinks, descriptions, and sample prices.</p><span class="nav-preview-cta">View Menu <b>→</b></span></div>
-        </div>
-      </div>
-      <div class="nav-item">
-        <a href="community.html">Community<span class="nav-chevron" aria-hidden="true">⌄</span></a>
-        <div class="nav-preview">
-          <div class="nav-preview-image nav-community" aria-hidden="true"></div>
-          <div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>Made for connection</h3><p>Explore guest moments and see what makes the cafe welcoming.</p><span class="nav-preview-cta">View Community <b>→</b></span></div>
-        </div>
-      </div>
-      <div class="nav-item">
-        <a href="contact.html">Contact<span class="nav-chevron" aria-hidden="true">⌄</span></a>
-        <div class="nav-preview">
-          <div class="nav-preview-image nav-contact" aria-hidden="true"></div>
-          <div class="nav-preview-copy"><span class="eyebrow">EXPLORE KAPE-LING</span><h3>Let's talk</h3><p>Find our contact details and send us a message.</p><span class="nav-preview-cta">View Contact <b>→</b></span></div>
-        </div>
-      </div>
-    </nav></header>
-  <main>
-    <section class="page-hero menu-hero"><p class="eyebrow">BREWED FOR YOUR DAY</p><h1>Find your <em>favorite.</em></h1><p>From bold and simple to smooth and sweet, there's a cup for every kind of day.</p></section>
-    <section class="section-wrap menu-section"><div class="section-heading"><div><p class="eyebrow">THE COFFEE CORNER</p><h2>Our featured drinks</h2></div></div>
-      <div class="menu-grid">
-        <article class="menu-card"><div class="drink-photo drink-one" role="img" aria-label="Iced caramel latte"></div><div class="menu-info"><div><h3>Caramel Latte</h3><p>Espresso, milk, and a smooth caramel finish.</p></div><strong>₱120</strong></div><span class="menu-tag">CUSTOMER FAVORITE</span></article>
-        <article class="menu-card"><div class="drink-photo drink-two" role="img" aria-label="Iced americano"></div><div class="menu-info"><div><h3>Iced Americano</h3><p>Bold espresso balanced with cool water and ice.</p></div><strong>₱95</strong></div></article>
-        <article class="menu-card"><div class="drink-photo drink-three" role="img" aria-label="Cappuccino"></div><div class="menu-info"><div><h3>Cappuccino</h3><p>Rich espresso topped with creamy milk foam.</p></div><strong>₱110</strong></div></article>
-        <article class="menu-card"><div class="drink-photo drink-four" role="img" aria-label="Iced mocha"></div><div class="menu-info"><div><h3>Iced Mocha</h3><p>A comforting blend of coffee, chocolate, and milk.</p></div><strong>₱125</strong></div></article>
+      <div class="showcase-side"><span class="side-line"></span><span>GOOD COFFEE.<br>BETTER COMPANY.</span></div>
+    </section>
+
+    <section class="drink-picker" aria-label="Choose a drink">
+      <div class="picker-heading"><div><p class="eyebrow">THE MENU</p><h2>Choose your <em>favorite.</em></h2></div><p>HOVER OR TAP A DRINK TO EXPLORE</p></div>
+      <div class="picker-track">
+        <button class="drink-option selected" type="button" data-drink="0" aria-pressed="true"><span class="option-number">01</span><span class="mini-cup mini-caramel"><i></i></span><span class="option-name">Caramel Latte</span><span class="option-price">₱120</span></button>
+        <button class="drink-option" type="button" data-drink="1" aria-pressed="false"><span class="option-number">02</span><span class="mini-cup mini-americano"><i></i></span><span class="option-name">Iced Americano</span><span class="option-price">₱95</span></button>
+        <button class="drink-option" type="button" data-drink="2" aria-pressed="false"><span class="option-number">03</span><span class="mini-cup mini-cappuccino"><i></i></span><span class="option-name">Cappuccino</span><span class="option-price">₱110</span></button>
+        <button class="drink-option" type="button" data-drink="3" aria-pressed="false"><span class="option-number">04</span><span class="mini-cup mini-mocha"><i></i></span><span class="option-name">Iced Mocha</span><span class="option-price">₱125</span></button>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><a class="footer-brand" href="index.html">Kape-ling Cafe</a><p>Where Friendship Brews, One Cup at a Time.</p><div><a href="about.html">About</a><a href="menu.html">Menu</a><a href="community.html">Community</a><a href="contact.html">Contact</a></div><small>© 2026 Kape-ling Cafe. </small></footer>
-</body></html>
+
+  <footer class="site-footer"><a class="footer-brand" href="index.html">Kape-ling Cafe</a><p>Where Friendship Brews, One Cup at a Time.</p><div><a href="about.html">About</a><a href="menu.html">Menu</a><a href="community.html">Community</a><a href="contact.html">Contact</a></div><small>© 2026 Kape-ling Cafe.</small></footer>
+
+  <script>
+    const drinks = [
+      {name:'Caramel<br><em>Latte.</em>',plain:'Caramel Latte',description:'A smooth espresso blend with creamy milk and a sweet caramel finish. Your cozy pick-me-up, served over ice.',price:'₱120',className:'caramel-cup',label:'3D-style caramel latte in a clear takeaway cup'},
+      {name:'Iced<br><em>Americano.</em>',plain:'Iced Americano',description:'Bold espresso softened with cool water and ice. Clean, refreshing, and made for those who love a stronger cup.',price:'₱95',className:'americano-cup',label:'3D-style iced americano in a clear takeaway cup'},
+      {name:'Classic<br><em>Cappuccino.</em>',plain:'Cappuccino',description:'A rich espresso base topped with silky steamed milk and a soft cloud of foam. A timeless cafe favorite.',price:'₱110',className:'cappuccino-cup',label:'3D-style cappuccino in a ceramic cafe cup'},
+      {name:'Iced<br><em>Mocha.</em>',plain:'Iced Mocha',description:'A delicious mix of espresso, chocolate, and milk. Smooth, chilled, and just the right amount of sweet.',price:'₱125',className:'mocha-cup',label:'3D-style iced mocha in a clear takeaway cup'}
+    ];
+    const object = document.getElementById('drinkObject');
+    const buttons = [...document.querySelectorAll('.drink-option')];
+    let active = 0;
+    function selectDrink(index) {
+      if (index === active) {
+        object.classList.remove('revolve');
+        void object.offsetWidth;
+        object.classList.add('revolve');
+        return;
+      }
+      active = index;
+      const drink = drinks[index];
+      object.className = 'drink-object ' + drink.className + ' revolve';
+      object.setAttribute('aria-label', drink.label);
+      document.getElementById('drinkName').innerHTML = drink.name;
+      document.getElementById('drinkDescription').textContent = drink.description;
+      document.getElementById('drinkPrice').textContent = drink.price;
+      document.getElementById('drinkCount').textContent = String(index + 1).padStart(2,'0') + ' / 04';
+      buttons.forEach((button,i) => {
+        const selected = i === index;
+        button.classList.toggle('selected',selected);
+        button.setAttribute('aria-pressed',String(selected));
+      });
+    }
+    buttons.forEach((button,index) => {
+      button.addEventListener('mouseenter',() => selectDrink(index));
+      button.addEventListener('focus',() => selectDrink(index));
+      button.addEventListener('click',() => selectDrink(index));
+    });
+    object.addEventListener('mouseenter',() => {
+      object.classList.remove('revolve');
+      void object.offsetWidth;
+      object.classList.add('revolve');
+    });
+  </script>
+</body>
+</html>
