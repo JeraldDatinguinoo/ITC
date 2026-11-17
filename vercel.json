@@ -4,39 +4,39 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/website-files/index.html"
+      "destination": "/website-files/index"
     },
     {
       "source": "/about",
-      "destination": "/website-files/about.html"
+      "destination": "/website-files/about"
     },
     {
       "source": "/about/",
-      "destination": "/website-files/about.html"
+      "destination": "/website-files/about"
     },
     {
       "source": "/menu",
-      "destination": "/website-files/menu.html"
+      "destination": "/website-files/menu"
     },
     {
       "source": "/menu/",
-      "destination": "/website-files/menu.html"
+      "destination": "/website-files/menu"
     },
     {
       "source": "/community",
-      "destination": "/website-files/community.html"
+      "destination": "/website-files/community"
     },
     {
       "source": "/community/",
-      "destination": "/website-files/community.html"
+      "destination": "/website-files/community"
     },
     {
       "source": "/contact",
-      "destination": "/website-files/contact.html"
+      "destination": "/website-files/contact"
     },
     {
       "source": "/contact/",
-      "destination": "/website-files/contact.html"
+      "destination": "/website-files/contact"
     }
   ]
 }
