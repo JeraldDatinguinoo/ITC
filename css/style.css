@@ -171,3 +171,48 @@ body{background:var(--paper);color:var(--deep)}
 @media(max-width:850px){.menu-showcase{grid-template-columns:1fr 1.15fr;gap:10px;width:calc(100% - 44px);min-height:560px}.showcase-side{display:none}.product-stage{height:470px}.drink-object{transform:scale(.88) rotateY(-18deg)}.picker-track{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.menu-showcase{grid-template-columns:1fr;gap:0;padding:45px 0 25px}.showcase-copy{grid-row:2;text-align:center;padding:10px 5px 30px}.showcase-copy .eyebrow{margin-bottom:12px}.showcase-copy h1{font-size:48px;margin-bottom:12px}.showcase-description,.showcase-bottom{margin-left:auto;margin-right:auto}.showcase-bottom{justify-content:center}.product-stage{grid-row:1;height:380px}.drink-object{transform:scale(.78) rotateY(-18deg)}.stage-glow{width:290px;height:290px}.stage-orbit{width:270px}.stage-caption{top:0}.stage-hint{bottom:0}.picker-heading{align-items:flex-start;flex-direction:column;gap:7px}.picker-heading h2{font-size:25px}.drink-picker{padding:30px 18px 35px}.picker-track{gap:8px}.drink-option{padding-left:68px;min-height:100px}.mini-cup{left:19px}.mini-cappuccino{left:15px}.option-name{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.drink-object.revolve{animation:none}.drink-option{transition:none}}
+
+
+/* Restore the original Kape-ling Cafe color palette */
+:root{--cream:#f4ebdd;--paper:#fbf8f2;--brown:#543b2b;--deep:#2e211a;--caramel:#b88a5a;--muted:#806d5d;--line:#e4d8c8;--white:#fffdf9}
+body,.immersive-menu{background:var(--paper);color:var(--deep)}
+.site-header{background:var(--paper)}
+.brand,.intro-section h2,.story-text h2,.contact-copy h2,.feature-card h3,.purpose-grid h2,.section-heading h2,.menu-info h3,.review-card p{color:var(--brown)}
+.main-nav a:hover,.main-nav a.active{color:var(--brown)}
+.page-hero,.feature-card,.review-card,.contact-form{background:var(--cream)}
+.cta-band,.purpose-section,.drink-picker{background:#eee2d1}
+.menu-showcase{background:var(--paper)}
+.showcase-count,.showcase-copy h1 em,.picker-heading h2 em{color:var(--caramel)}
+.showcase-copy h1,.picker-heading h2{color:var(--brown)}
+.showcase-description{color:var(--muted)}
+.showcase-bottom{border-color:var(--line)}
+.showcase-price{color:var(--brown)}
+.showcase-note,.stage-caption,.stage-hint,.showcase-side{color:var(--muted)}
+.stage-glow{background:radial-gradient(circle,rgba(184,138,90,.23),rgba(184,138,90,0) 68%)}
+.stage-orbit{border-color:rgba(184,138,90,.3)}
+.side-line{background:var(--caramel)}
+.drink-picker{border-color:var(--line)}
+.drink-option{background:var(--paper);border-color:#d8c7b5;color:var(--deep)}
+.drink-option:hover,.drink-option.selected{border-color:var(--caramel);background:var(--white)}
+.option-number{color:#bba48d}
+.option-price,.option-category{color:var(--caramel)}
+.menu-categories{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 22px}
+.category-tab{border:1px solid #d8c7b5;background:var(--paper);padding:9px 15px;color:var(--muted);font:600 10px "DM Sans",sans-serif;cursor:pointer;transition:.2s}
+.category-tab span{margin-left:7px;color:var(--caramel);font-size:9px}
+.category-tab:hover,.category-tab.active{background:var(--brown);border-color:var(--brown);color:var(--cream)}
+.category-tab.active span,.category-tab:hover span{color:#e6c6a5}
+.picker-track{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.drink-option{min-height:126px;padding-left:82px}
+.option-category{font-size:7px;letter-spacing:1.2px;font-weight:700}
+.option-name{font-size:13px}
+.vanilla-cup .cup-liquid{background:linear-gradient(90deg,#9a653d,#e0b77d 35%,#8c542f)}
+.spanish-cup .cup-liquid{background:linear-gradient(90deg,#6b3d25,#d4a16c 40%,#54301f)}
+.hazelnut-cup .cup-liquid{background:linear-gradient(90deg,#2e1712,#9a5940 45%,#321710)}
+.brown-sugar-cup .cup-liquid{background:linear-gradient(90deg,#362018,#a46b3d 48%,#3b2118)}
+.cold-brew-cup .cup-foam{display:none}
+.espresso-cup .cup-body{height:180px;top:110px;clip-path:none;border-radius:12px 12px 30px 30px}
+.espresso-cup .cup-lid{display:none}
+.espresso-cup .cup-ice,.espresso-cup .cup-sleeve{display:none}
+.espresso-cup .cup-bottom{bottom:85px}
+@media(max-width:850px){.picker-track{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.picker-track{grid-template-columns:repeat(2,minmax(0,1fr))}.category-tab{padding:8px 10px;font-size:9px}.drink-option{padding-left:68px}.option-name{font-size:11px}}
