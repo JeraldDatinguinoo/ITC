@@ -1,3 +1,25 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/website-files/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/website-files/about.html"
+    },
+    {
+      "source": "/menu",
+      "destination": "/website-files/menu.html"
+    },
+    {
+      "source": "/community",
+      "destination": "/website-files/community.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/website-files/contact.html"
+    }
+  ]
 }
