@@ -10,8 +10,6 @@
 @media(max-width:560px){.header-inner,.section-wrap{width:calc(100% - 36px)}.brand-mark{width:34px;height:34px}.brand-name{font-size:15px}.brand-name small{font-size:7px}.main-nav{overflow-x:auto;justify-content:flex-start;gap:24px;padding-bottom:2px}.main-nav a{white-space:nowrap;font-size:10px}.home-hero{grid-template-columns:1fr}.hero-image{min-height:280px;order:2}.hero-copy{min-height:390px;padding:54px 28px 70px}.hero-copy h1{font-size:48px}.hero-caption{bottom:25px;left:28px}.welcome{grid-template-columns:1fr;gap:22px;padding-top:70px;padding-bottom:65px}.home-tiles{grid-template-columns:1fr;padding-bottom:70px}.home-tile{min-height:260px}.page-intro{padding:70px 22px 65px}.page-intro h1{font-size:43px}.split-story,.community-intro{grid-template-columns:1fr;gap:30px;padding-top:65px;padding-bottom:65px}.editorial-photo,.community-photo{min-height:300px}.purpose-section{padding:60px 0}.purpose-grid{grid-template-columns:1fr;gap:28px}.quote-section{padding-top:65px;padding-bottom:65px}.menu-section{padding-top:55px;padding-bottom:70px}.menu-toolbar{align-items:flex-start;flex-direction:column;gap:5px}.menu-grid{grid-template-columns:1fr;gap:18px}.menu-photo{height:230px}.reviews-section{padding:60px 0}.review-grid{grid-template-columns:1fr;gap:22px}.community-bottom{padding-top:65px;padding-bottom:70px}.contact-layout{grid-template-columns:1fr;gap:35px;padding-top:65px;padding-bottom:70px}.contact-form{padding:27px 22px}.footer-inner{grid-template-columns:1fr;gap:18px}.footer-links{flex-wrap:wrap;gap:18px}.site-footer small{grid-column:1}.closing-band{padding:62px 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
-
-/* Cozy coffeehouse refinement */
 :root{--paper:#e8dece;--cream:#d9c8b2;--caramel:#9a6942;--brown:#402b20;--deep:#241811;--muted:#756252;--line:#cbbba8;--white:#eee4d6;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Manrope",Arial,sans-serif}
 body{background:var(--paper);color:var(--deep)}
 .site-header{background:rgba(232,222,206,.97);border-bottom-color:#c8b7a3}
@@ -39,7 +37,6 @@ h1 em,h2 em{color:#9a6942}
 .quote-section p{color:#402b20}
 @media(max-width:560px){.home-hero{background:#d9c8b2}}
 
-/* Drink-accurate menu photography from Pexels: black coffee stays black; milk drinks show milk */
 .drink-photo-1{background-image:url("https://images.pexels.com/photos/29497982/pexels-photo-29497982.jpeg?auto=compress&cs=tinysrgb&w=900")}
 .drink-photo-2{background-image:url("https://images.pexels.com/photos/34932738/pexels-photo-34932738.jpeg?auto=compress&cs=tinysrgb&w=900")}
 .drink-photo-3{background-image:url("https://images.pexels.com/photos/8736396/pexels-photo-8736396.jpeg?auto=compress&cs=tinysrgb&w=900")}
@@ -54,8 +51,6 @@ h1 em,h2 em{color:#9a6942}
 .drink-photo-12{background-image:url("https://images.pexels.com/photos/34046801/pexels-photo-34046801.jpeg?auto=compress&cs=tinysrgb&w=900")}
 .menu-photo{background-position:center;background-size:cover;filter:saturate(.84) sepia(.08)}
 
-
-/* Dark header panel: match the footer for a balanced coffeehouse frame */
 .site-header{background:#241811;border-bottom:1px solid rgba(232,222,206,.16)}
 .brand,.brand-name{color:#eee4d6}
 .brand-name b{color:#c08b5d}
@@ -65,7 +60,6 @@ h1 em,h2 em{color:#9a6942}
 .main-nav a:hover,.main-nav a.active{color:#fff4e6}
 .main-nav a.active:after,.main-nav a:hover:after{background:#c08b5d}
 
-/* Community testimonials: separate cards with stronger contrast and spacing */
 .reviews-section{background:#d2bea6;padding:82px 0 90px}
 .reviews-section h2{color:#352319;margin-bottom:34px}
 .review-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px}
@@ -77,8 +71,6 @@ h1 em,h2 em{color:#9a6942}
 @media(max-width:800px){.review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.review-grid{grid-template-columns:1fr;gap:16px}.review-grid article{min-height:0;padding:22px}.review-grid article p{font-size:21px}.reviews-section{padding:62px 0 70px}}
 
-
-/* About page: make Mission, Vision, and Values easier to distinguish */
 .purpose-section{
   background:#cdb79e;
   padding:88px 0 96px;
@@ -137,8 +129,6 @@ h1 em,h2 em{color:#9a6942}
   .purpose-grid h2{font-size:25px}
 }
 
-
-/* Homepage refresh: product-first layout and clear visit information */
 :root{--sans:"DM Sans",Arial,sans-serif}
 .brand-mark{display:grid;place-items:center;width:43px;height:43px;border:1px solid #c08b5d;color:#d5a477}
 .brand-mark svg{width:31px;height:31px}
