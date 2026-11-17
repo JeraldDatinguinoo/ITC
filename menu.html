@@ -44,12 +44,14 @@
 
     <section class="drink-picker" aria-label="Choose a drink">
       <div class="picker-heading"><div><p class="eyebrow">THE MENU</p><h2>Choose your <em>favorite.</em></h2></div><p>HOVER OR TAP A DRINK TO EXPLORE</p></div>
-      <div class="picker-track">
-        <button class="drink-option selected" type="button" data-drink="0" aria-pressed="true"><span class="option-number">01</span><span class="mini-cup mini-caramel"><i></i></span><span class="option-name">Caramel Latte</span><span class="option-price">₱120</span></button>
-        <button class="drink-option" type="button" data-drink="1" aria-pressed="false"><span class="option-number">02</span><span class="mini-cup mini-americano"><i></i></span><span class="option-name">Iced Americano</span><span class="option-price">₱95</span></button>
-        <button class="drink-option" type="button" data-drink="2" aria-pressed="false"><span class="option-number">03</span><span class="mini-cup mini-cappuccino"><i></i></span><span class="option-name">Cappuccino</span><span class="option-price">₱110</span></button>
-        <button class="drink-option" type="button" data-drink="3" aria-pressed="false"><span class="option-number">04</span><span class="mini-cup mini-mocha"><i></i></span><span class="option-name">Iced Mocha</span><span class="option-price">₱125</span></button>
+      <div class="menu-categories" role="group" aria-label="Filter drinks by category">
+        <button class="category-tab active" type="button" data-category="all" aria-pressed="true">All Drinks <span>12</span></button>
+        <button class="category-tab" type="button" data-category="hot" aria-pressed="false">Hot Coffee <span>3</span></button>
+        <button class="category-tab" type="button" data-category="cold" aria-pressed="false">Cold Coffee <span>4</span></button>
+        <button class="category-tab" type="button" data-category="black" aria-pressed="false">Black Coffee <span>2</span></button>
+        <button class="category-tab" type="button" data-category="specialty" aria-pressed="false">Specialty <span>3</span></button>
       </div>
+      <div class="picker-track" id="pickerTrack"></div>
     </section>
   </main>
 
@@ -57,45 +59,56 @@
 
   <script>
     const drinks = [
-      {name:'Caramel<br><em>Latte.</em>',plain:'Caramel Latte',description:'A smooth espresso blend with creamy milk and a sweet caramel finish. Your cozy pick-me-up, served over ice.',price:'₱120',className:'caramel-cup',label:'3D-style caramel latte in a clear takeaway cup'},
-      {name:'Iced<br><em>Americano.</em>',plain:'Iced Americano',description:'Bold espresso softened with cool water and ice. Clean, refreshing, and made for those who love a stronger cup.',price:'₱95',className:'americano-cup',label:'3D-style iced americano in a clear takeaway cup'},
-      {name:'Classic<br><em>Cappuccino.</em>',plain:'Cappuccino',description:'A rich espresso base topped with silky steamed milk and a soft cloud of foam. A timeless cafe favorite.',price:'₱110',className:'cappuccino-cup',label:'3D-style cappuccino in a ceramic cafe cup'},
-      {name:'Iced<br><em>Mocha.</em>',plain:'Iced Mocha',description:'A delicious mix of espresso, chocolate, and milk. Smooth, chilled, and just the right amount of sweet.',price:'₱125',className:'mocha-cup',label:'3D-style iced mocha in a clear takeaway cup'}
+      {name:'Caramel<br><em>Latte.</em>',plain:'Caramel Latte',description:'A smooth espresso blend with creamy milk and a sweet caramel finish. Your cozy pick-me-up, served over ice.',price:'₱120',className:'caramel-cup',mini:'mini-caramel',category:'cold',categoryLabel:'COLD COFFEE',label:'3D-style caramel latte in a clear takeaway cup'},
+      {name:'Iced<br><em>Americano.</em>',plain:'Iced Americano',description:'Bold espresso softened with cool water and ice. Clean, refreshing, and made for those who love a stronger cup.',price:'₱95',className:'americano-cup',mini:'mini-americano',category:'cold',categoryLabel:'COLD COFFEE',label:'3D-style iced americano in a clear takeaway cup'},
+      {name:'Classic<br><em>Cappuccino.</em>',plain:'Cappuccino',description:'A rich espresso base topped with silky steamed milk and a soft cloud of foam. A timeless cafe favorite.',price:'₱110',className:'cappuccino-cup',mini:'mini-cappuccino',category:'hot',categoryLabel:'HOT COFFEE',label:'3D-style cappuccino in a ceramic cafe cup'},
+      {name:'Iced<br><em>Mocha.</em>',plain:'Iced Mocha',description:'A delicious mix of espresso, chocolate, and milk. Smooth, chilled, and just the right amount of sweet.',price:'₱125',className:'mocha-cup',mini:'mini-mocha',category:'cold',categoryLabel:'COLD COFFEE',label:'3D-style iced mocha in a clear takeaway cup'},
+      {name:'Cafe<br><em>Latte.</em>',plain:'Cafe Latte',description:'Fresh espresso and steamed milk come together for a mellow, creamy everyday favorite.',price:'₱115',className:'cappuccino-cup latte-cup',mini:'mini-cappuccino',category:'hot',categoryLabel:'HOT COFFEE',label:'3D-style hot cafe latte in a ceramic cup'},
+      {name:'Vanilla<br><em>Latte.</em>',plain:'Vanilla Latte',description:'A comforting latte with a gentle vanilla sweetness and a smooth espresso finish.',price:'₱130',className:'caramel-cup vanilla-cup',mini:'mini-caramel',category:'hot',categoryLabel:'HOT COFFEE',label:'3D-style vanilla latte in a cafe cup'},
+      {name:'Cold Brew<br><em>Classic.</em>',plain:'Classic Cold Brew',description:'Slow-steeped coffee served chilled for a naturally smooth, bold, and refreshing taste.',price:'₱115',className:'americano-cup cold-brew-cup',mini:'mini-americano',category:'black',categoryLabel:'BLACK COFFEE',label:'3D-style classic cold brew in a clear cup'},
+      {name:'Espresso<br><em>Shot.</em>',plain:'Espresso',description:'A concentrated shot of rich coffee with a deep aroma and a bold finish.',price:'₱75',className:'americano-cup espresso-cup',mini:'mini-americano',category:'black',categoryLabel:'BLACK COFFEE',label:'3D-style espresso in a small ceramic cup'},
+      {name:'Spanish<br><em>Latte.</em>',plain:'Spanish Latte',description:'Espresso and creamy milk with a touch of sweet condensed milk for a rich finish.',price:'₱135',className:'caramel-cup spanish-cup',mini:'mini-caramel',category:'specialty',categoryLabel:'SPECIALTY COFFEE',label:'3D-style Spanish latte in a clear takeaway cup'},
+      {name:'Hazelnut<br><em>Mocha.</em>',plain:'Hazelnut Mocha',description:'Chocolate, espresso, and nutty hazelnut notes blended into one indulgent cup.',price:'₱140',className:'mocha-cup hazelnut-cup',mini:'mini-mocha',category:'specialty',categoryLabel:'SPECIALTY COFFEE',label:'3D-style hazelnut mocha in a clear takeaway cup'},
+      {name:'Brown Sugar<br><em>Shaken.</em>',plain:'Brown Sugar Shaken Espresso',description:'Espresso shaken over ice with brown sugar for a lively, lightly sweet coffee.',price:'₱135',className:'americano-cup brown-sugar-cup',mini:'mini-americano',category:'specialty',categoryLabel:'SPECIALTY COFFEE',label:'3D-style brown sugar shaken espresso in a clear cup'},
+      {name:'Iced Vanilla<br><em>Cold Brew.</em>',plain:'Iced Vanilla Cold Brew',description:'Smooth cold brew with a soft vanilla finish, served chilled over ice.',price:'₱130',className:'caramel-cup vanilla-cup',mini:'mini-caramel',category:'cold',categoryLabel:'COLD COFFEE',label:'3D-style iced vanilla cold brew in a clear cup'}
     ];
-    const object = document.getElementById('drinkObject');
-    const buttons = [...document.querySelectorAll('.drink-option')];
-    let active = 0;
-    function selectDrink(index) {
-      if (index === active) {
-        object.classList.remove('revolve');
-        void object.offsetWidth;
-        object.classList.add('revolve');
-        return;
-      }
-      active = index;
-      const drink = drinks[index];
-      object.className = 'drink-object ' + drink.className + ' revolve';
-      object.setAttribute('aria-label', drink.label);
-      document.getElementById('drinkName').innerHTML = drink.name;
-      document.getElementById('drinkDescription').textContent = drink.description;
-      document.getElementById('drinkPrice').textContent = drink.price;
-      document.getElementById('drinkCount').textContent = String(index + 1).padStart(2,'0') + ' / 04';
-      buttons.forEach((button,i) => {
-        const selected = i === index;
-        button.classList.toggle('selected',selected);
-        button.setAttribute('aria-pressed',String(selected));
+    const object=document.getElementById('drinkObject');
+    const track=document.getElementById('pickerTrack');
+    const tabs=[...document.querySelectorAll('.category-tab')];
+    let active=0, currentCategory='all';
+    function renderOptions(){
+      const visible=drinks.map((drink,index)=>({...drink,index})).filter(drink=>currentCategory==='all'||drink.category===currentCategory);
+      track.innerHTML=visible.map((drink)=>`<button class="drink-option ${drink.index===active?'selected':''}" type="button" data-drink="${drink.index}" aria-pressed="${drink.index===active}"><span class="option-number">${String(drink.index+1).padStart(2,'0')}</span><span class="mini-cup ${drink.mini}"><i></i></span><span class="option-category">${drink.categoryLabel}</span><span class="option-name">${drink.plain}</span><span class="option-price">${drink.price}</span></button>`).join('');
+      track.querySelectorAll('.drink-option').forEach(button=>{
+        const index=Number(button.dataset.drink);
+        button.addEventListener('mouseenter',()=>selectDrink(index));
+        button.addEventListener('focus',()=>selectDrink(index));
+        button.addEventListener('click',()=>selectDrink(index));
       });
     }
-    buttons.forEach((button,index) => {
-      button.addEventListener('mouseenter',() => selectDrink(index));
-      button.addEventListener('focus',() => selectDrink(index));
-      button.addEventListener('click',() => selectDrink(index));
+    function selectDrink(index){
+      active=index;
+      const drink=drinks[index];
+      object.className='drink-object '+drink.className+' revolve';
+      object.setAttribute('aria-label',drink.label);
+      document.getElementById('drinkName').innerHTML=drink.name;
+      document.getElementById('drinkDescription').textContent=drink.description;
+      document.getElementById('drinkPrice').textContent=drink.price;
+      document.getElementById('drinkCount').textContent=String(index+1).padStart(2,'0')+' / '+String(drinks.length).padStart(2,'0');
+      document.querySelector('.stage-caption').textContent=drink.categoryLabel;
+      renderOptions();
+    }
+    tabs.forEach(tab=>tab.addEventListener('click',()=>{
+      currentCategory=tab.dataset.category;
+      tabs.forEach(item=>{const on=item===tab;item.classList.toggle('active',on);item.setAttribute('aria-pressed',String(on));});
+      const first=drinks.findIndex(drink=>currentCategory==='all'||drink.category===currentCategory);
+      if(first>=0) active=first;
+      selectDrink(active);
+    }));
+    object.addEventListener('mouseenter',()=>{
+      object.classList.remove('revolve');void object.offsetWidth;object.classList.add('revolve');
     });
-    object.addEventListener('mouseenter',() => {
-      object.classList.remove('revolve');
-      void object.offsetWidth;
-      object.classList.add('revolve');
-    });
+    renderOptions();
   </script>
 </body>
 </html>
