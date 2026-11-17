@@ -9,3 +9,46 @@
 @media(max-width:800px){.header-inner{width:calc(100% - 36px);min-height:74px;flex-wrap:wrap;padding:13px 0;gap:12px}.main-nav{width:100%;justify-content:space-between;gap:10px}.main-nav a{font-size:11px}.home-hero{grid-template-columns:1fr 1fr;min-height:490px}.hero-image{min-height:490px}.hero-copy{padding:45px 30px}.hero-caption{left:30px}.welcome{gap:35px}.split-story,.community-intro{gap:40px}.menu-grid{grid-template-columns:repeat(2,1fr)}.contact-layout{gap:45px}.footer-inner{width:calc(100% - 36px)}}
 @media(max-width:560px){.header-inner,.section-wrap{width:calc(100% - 36px)}.brand-mark{width:34px;height:34px}.brand-name{font-size:15px}.brand-name small{font-size:7px}.main-nav{overflow-x:auto;justify-content:flex-start;gap:24px;padding-bottom:2px}.main-nav a{white-space:nowrap;font-size:10px}.home-hero{grid-template-columns:1fr}.hero-image{min-height:280px;order:2}.hero-copy{min-height:390px;padding:54px 28px 70px}.hero-copy h1{font-size:48px}.hero-caption{bottom:25px;left:28px}.welcome{grid-template-columns:1fr;gap:22px;padding-top:70px;padding-bottom:65px}.home-tiles{grid-template-columns:1fr;padding-bottom:70px}.home-tile{min-height:260px}.page-intro{padding:70px 22px 65px}.page-intro h1{font-size:43px}.split-story,.community-intro{grid-template-columns:1fr;gap:30px;padding-top:65px;padding-bottom:65px}.editorial-photo,.community-photo{min-height:300px}.purpose-section{padding:60px 0}.purpose-grid{grid-template-columns:1fr;gap:28px}.quote-section{padding-top:65px;padding-bottom:65px}.menu-section{padding-top:55px;padding-bottom:70px}.menu-toolbar{align-items:flex-start;flex-direction:column;gap:5px}.menu-grid{grid-template-columns:1fr;gap:18px}.menu-photo{height:230px}.reviews-section{padding:60px 0}.review-grid{grid-template-columns:1fr;gap:22px}.community-bottom{padding-top:65px;padding-bottom:70px}.contact-layout{grid-template-columns:1fr;gap:35px;padding-top:65px;padding-bottom:70px}.contact-form{padding:27px 22px}.footer-inner{grid-template-columns:1fr;gap:18px}.footer-links{flex-wrap:wrap;gap:18px}.site-footer small{grid-column:1}.closing-band{padding:62px 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+
+/* Cozy coffeehouse refinement */
+:root{--paper:#e8dece;--cream:#d9c8b2;--caramel:#9a6942;--brown:#402b20;--deep:#241811;--muted:#756252;--line:#cbbba8;--white:#eee4d6;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Manrope",Arial,sans-serif}
+body{background:var(--paper);color:var(--deep)}
+.site-header{background:rgba(232,222,206,.97);border-bottom-color:#c8b7a3}
+.brand-mark{border-color:#9a6942;color:#9a6942}
+.main-nav a{color:#725d4c}
+.home-hero,.page-intro,.purpose-section,.reviews-section,.closing-band{background:#d9c8b2}
+.hero-copy h1,.page-intro h1,.welcome h2,.editorial-copy h2,.contact-copy h2,.purpose-grid h2,.menu-toolbar h2,.reviews-section h2,.closing-band h2,.community-bottom h2{color:#352319}
+h1 em,h2 em{color:#9a6942}
+.eyebrow,.menu-card-meta span,.contact-detail small{color:#95633c}
+.button-dark{background:#302017;color:#f0e5d6}
+.button-dark:hover{background:#523725}
+.home-tile:before{background:linear-gradient(180deg,rgba(25,15,9,.22),rgba(25,15,9,.82))}
+.menu-card{background:#eee4d6;border-color:#cbbba8}
+.menu-card:hover{box-shadow:0 12px 28px rgba(36,24,17,.15)}
+.menu-card h3{color:#402b20}
+.menu-card p,.welcome>p,.editorial-copy>p:not(.eyebrow),.contact-copy>p:not(.eyebrow){color:#756252}
+.filter-button{border-color:#c5b29c;color:#705a47}
+.filter-button:hover,.filter-button.active{background:#302017;border-color:#302017;color:#f0e5d6}
+.menu-filters{border-top-color:#cbbba8}
+.contact-form{background:#d9c8b2}
+.contact-form input,.contact-form textarea{background:#eee4d6;border-color:#c5b29c}
+.footer-inner .footer-brand{color:#f0e5d6}
+.site-footer{background:#241811}
+.footer-links a{color:#d8c6b2}
+.quote-section p{color:#402b20}
+@media(max-width:560px){.home-hero{background:#d9c8b2}}
+/* Distinct drink photography: each menu item has its own matching image */
+.menu-card:nth-child(1) .menu-photo{background-image:url("https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(2) .menu-photo{background-image:url("https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(3) .menu-photo{background-image:url("https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(4) .menu-photo{background-image:url("https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(5) .menu-photo{background-image:url("https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(6) .menu-photo{background-image:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(7) .menu-photo{background-image:url("https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(8) .menu-photo{background-image:url("https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(9) .menu-photo{background-image:url("https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(10) .menu-photo{background-image:url("https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(11) .menu-photo{background-image:url("https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=88")}
+.menu-card:nth-child(12) .menu-photo{background-image:url("https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=88")}
+.menu-photo{background-position:center;background-size:cover;filter:saturate(.82) sepia(.08)}
