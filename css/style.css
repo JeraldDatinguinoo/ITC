@@ -1445,3 +1445,57 @@ html.loading-active {
   margin-left:18px;
   background:#eee4d7;
 }
+
+
+/* Smooth page-to-page panel changes in browsers that support it. */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root) {
+  animation: panel-leave .32s ease both;
+}
+::view-transition-new(root) {
+  animation: panel-enter .42s cubic-bezier(.22,.7,.2,1) both;
+}
+@keyframes panel-leave {
+  to { opacity:0; filter:blur(2px); }
+}
+@keyframes panel-enter {
+  from { opacity:0; filter:blur(2px); transform:translateY(5px); }
+  to { opacity:1; filter:blur(0); transform:translateY(0); }
+}
+
+/* Avoid a blank frame on browsers without cross-page view transitions. */
+body.page-enter,
+body.page-enter.page-ready,
+body.page-leave {
+  opacity:1;
+  transition:none;
+}
+@media(prefers-reduced-motion:reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation:none;
+  }
+}
+
+/* More voices in the Tambayan conversation. */
+.post-comments {
+  gap:9px;
+  border-radius:3px;
+}
+.comment-line {
+  border-radius:12px 12px 12px 3px;
+  box-shadow:0 1px 2px #38251d0a;
+}
+.comment-line:nth-of-type(even) {
+  margin-left:18px;
+  border-radius:12px 12px 3px 12px;
+}
+.comment-line:nth-of-type(odd) {
+  margin-left:0;
+}
+.comment-line strong {
+  font-family:Arial,sans-serif;
+  font-weight:700;
+}
