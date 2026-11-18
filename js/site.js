@@ -127,6 +127,9 @@ function setupAccountModal() {
     setMode("login");
   });
 
+  const communityLogin = document.querySelector("#community-login");
+  if (communityLogin) communityLogin.addEventListener("click", function () { openButton.click(); });
+
   modal.querySelector(".modal-close").addEventListener("click", closeModal);
   modal.addEventListener("click", function (event) {
     if (event.target === modal) closeModal();
