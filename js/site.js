@@ -58,7 +58,7 @@ function addLoadingScreen() {
       setTimeout(function () {
         screen.remove();
       }, 500);
-    }, 650);
+    }, 1200);
   });
 }
 
@@ -301,54 +301,55 @@ function setupCommunity() {
 }
 
 function getPosts() {
-  try {
-    const savedPosts = localStorage.getItem("kapeLingPosts");
-    if (savedPosts) {
-      const existingPosts = JSON.parse(savedPosts);
-      if (existingPosts.length) return existingPosts;
+  const examples = [
+    {
+      id: "sample-1",
+      name: "Mika Santos",
+      email: "sample-mika",
+      content: "Finally finished our group project! A Spanish latte is definitely deserved after that.",
+      date: "Community example",
+      comments: [
+        { name: "Paolo Reyes", text: "Congrats! You earned that coffee." },
+        { name: "Ana Cruz", text: "Same here. Deadlines are no joke!" }
+      ],
+      reactions: ["sample-paolo", "sample-ana", "sample-jules"]
+    },
+    {
+      id: "sample-2",
+      name: "Paolo Reyes",
+      email: "sample-paolo",
+      content: "Any recommendations for someone who wants a strong coffee but not too sweet?",
+      date: "Community example",
+      comments: [
+        { name: "Mika Santos", text: "Try the Americano. Simple and strong." },
+        { name: "Jules Garcia", text: "Kapeng Barako is worth trying too." }
+      ],
+      reactions: ["sample-mika", "sample-ana"]
+    },
+    {
+      id: "sample-3",
+      name: "Ana Cruz",
+      email: "sample-ana",
+      content: "Study reminder: take a short break, drink some water, and don't forget to rest.",
+      date: "Community example",
+      comments: [
+        { name: "Jules Garcia", text: "Needed this reminder today. Thank you!" }
+      ],
+      reactions: ["sample-mika", "sample-paolo"]
     }
+  ];
 
-    const examples = [
-      {
-        id: "sample-1",
-        name: "Mika Santos",
-        email: "sample-mika",
-        content: "Finally finished our group project! A Spanish latte is definitely deserved after that.",
-        date: "Community example",
-        comments: [
-          { name: "Paolo Reyes", text: "Congrats! You earned that coffee." },
-          { name: "Ana Cruz", text: "Same here. Deadlines are no joke!" }
-        ],
-        reactions: ["sample-paolo", "sample-ana", "sample-jules"]
-      },
-      {
-        id: "sample-2",
-        name: "Paolo Reyes",
-        email: "sample-paolo",
-        content: "Any recommendations for someone who wants a strong coffee but not too sweet?",
-        date: "Community example",
-        comments: [
-          { name: "Mika Santos", text: "Try the Americano. Simple and strong." },
-          { name: "Jules Garcia", text: "Kapeng Barako is worth trying too." }
-        ],
-        reactions: ["sample-mika", "sample-ana"]
-      },
-      {
-        id: "sample-3",
-        name: "Ana Cruz",
-        email: "sample-ana",
-        content: "Study reminder: take a short break, drink some water, and don't forget to rest.",
-        date: "Community example",
-        comments: [
-          { name: "Jules Garcia", text: "Needed this reminder today. Thank you!" }
-        ],
-        reactions: ["sample-mika", "sample-paolo"]
-      }
-    ];
-    localStorage.setItem("kapeLingPosts", JSON.stringify(examples));
-    return examples;
+  try {
+    const savedPosts = JSON.parse(localStorage.getItem("kapeLingPosts") || "[]");
+    const existingPosts = Array.isArray(savedPosts) ? savedPosts : [];
+    const userPosts = existingPosts.filter(function (post) {
+      return !String(post.id).startsWith("sample-");
+    });
+    const allPosts = examples.concat(userPosts);
+    localStorage.setItem("kapeLingPosts", JSON.stringify(allPosts));
+    return allPosts;
   } catch (error) {
-    return [];
+    return examples;
   }
 }
 
