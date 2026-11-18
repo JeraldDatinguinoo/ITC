@@ -303,7 +303,10 @@ function setupCommunity() {
 function getPosts() {
   try {
     const savedPosts = localStorage.getItem("kapeLingPosts");
-    if (savedPosts) return JSON.parse(savedPosts);
+    if (savedPosts) {
+      const existingPosts = JSON.parse(savedPosts);
+      if (existingPosts.length) return existingPosts;
+    }
 
     const examples = [
       {
