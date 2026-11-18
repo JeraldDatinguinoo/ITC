@@ -1373,20 +1373,16 @@ h1 em,h2 em {
 /* Smooth movement between the website pages */
 body.page-enter {
   opacity:0;
-  transform:translateY(8px);
 }
 body.page-enter.page-ready {
   opacity:1;
-  transform:translateY(0);
-  transition:opacity .32s ease,transform .32s ease;
+  transition:opacity .32s ease;
 }
 body.page-leave {
   opacity:0;
-  transform:translateY(-5px);
-  transition:opacity .22s ease,transform .22s ease;
+  transition:opacity .22s ease;
 }
 
-/* Clear menu action button */
 .community-post {
   transition:background .2s ease,border-color .2s ease,transform .2s ease;
 }
@@ -1396,7 +1392,6 @@ body.page-leave {
 @media(prefers-reduced-motion:reduce) {
   body.page-enter,body.page-enter.page-ready,body.page-leave {
     opacity:1;
-    transform:none;
     transition:none;
   }
   .community-post {
