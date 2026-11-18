@@ -161,10 +161,7 @@ function showAccountDetails(modal, user) {
   form.querySelector("strong").textContent = user.name;
   form.querySelector("button").addEventListener("click", function () {
     sessionStorage.removeItem("kapeLingCurrentUser");
-    closeAccountModal();
-    const button = document.querySelector("#account-open");
-    if (button) button.textContent = "Log in";
-    updateCommunityForm();
+    window.location.reload();
   });
   modal.querySelector(".account-tabs").hidden = true;
   modal.querySelector(".account-message").textContent = "";
@@ -268,26 +265,8 @@ function updateCommunityForm() {
 
 // Create the discussion area, and save posts/comments/reactions in this browser.
 function setupCommunity() {
-  const details = document.querySelector(".community-bottom");
-  if (!details) return;
-
-  const board = document.createElement("section");
-  board.className = "tambayan-board section-wrap";
-  board.innerHTML = `
-    <div class="tambayan-heading">
-      <p class="eyebrow">KWENTUHAN CORNER</p>
-      <h2>What's on your <em>mind?</em></h2>
-      <p>Share a thought, ask a question, or leave a little encouragement.</p>
-    </div>
-    <p class="community-login-prompt">Log in to join the conversation. <button type="button" class="text-button" id="community-login">Log in / Sign up</button></p>
-    <form id="community-post-form" class="community-post-form" hidden>
-      <label for="community-post">Write a post</label>
-      <textarea id="community-post" rows="3" maxlength="400" placeholder="Share something with the Kape-ling community..."></textarea>
-      <div class="post-form-bottom"><small>Use at least 3 clear words. Maximum 400 characters.</small><button class="button" type="submit">Post to tambayan</button></div>
-      <p class="form-feedback" aria-live="polite"></p>
-    </form>
-    <div class="community-feed" aria-live="polite"></div>`;
-  details.parentNode.insertBefore(board, details);
+  const board = document.querySelector(".tambayan-board");
+  if (!board) return;
 
   board.querySelector("#community-login").addEventListener("click", openAccountModal);
   board.querySelector("#community-post-form").addEventListener("submit", addCommunityPost);
