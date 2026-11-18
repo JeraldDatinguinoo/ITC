@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>document.documentElement.classList.add("loading-active");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Coffee, merienda, and a little time well spent at Kape-ling Cafe in Batangas City.">
   <meta name="theme-color" content="#faf6f0">
@@ -10,6 +11,19 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<div class="loading-screen" role="status" aria-label="Loading Kape-ling Cafe">
+  <div class="loading-content">
+    <div class="coffee-animation" aria-hidden="true">
+      <span class="steam steam-one"></span>
+      <span class="steam steam-two"></span>
+      <span class="steam steam-three"></span>
+      <div class="coffee-cup"><span></span></div>
+      <div class="cup-saucer"></div>
+    </div>
+    <p class="loading-brand">Kape-ling Cafe</p>
+    <p class="loading-message">Brewing something good</p>
+  </div>
+</div>
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="/" aria-label="Kape-ling Cafe home">
@@ -77,6 +91,6 @@
     <small>© 2026 Kape-ling Cafe <span>· Website by the Kape-ling team</span></small>
   </div>
 </footer>
-<script src="/js/site.js?v=4"></script>
+<script src="/js/site.js?v=5"></script>
 </body>
 </html>
