@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   addLoadingScreen();
   setupAccountModal();
   showCommunityExamples();
+  setupMenuPreviews();
 });
 
 // Use the loading screen already written in the HTML so it appears before the page.
@@ -220,5 +221,54 @@ function showCommunityExamples() {
 
     card.append(author, content, actions, comments);
     feed.appendChild(card);
+  });
+}
+
+
+// Show a drink or food photo when a menu item is hovered or focused.
+function setupMenuPreviews() {
+  const rows = document.querySelectorAll(".menu-category .price-row");
+  if (!rows.length) return;
+
+  const photos = [
+    "photo-1461023058943-07fcbe16d735.avif",
+    "photo-1517701550927-30cf4ba1dba5.avif",
+    "photo-1570968915860-54d5c301fa9f.avif",
+    "photo-1498804103079-a6351b050096.avif",
+    "photo-1517701604599-bb29b565090c.avif",
+    "photo-1509042239860-f550ce710b93.avif",
+    "photo-1495474472287-4d71bcdd2085.avif",
+    "pexels-photo-13549430.avif",
+    "pexels-photo-14407580.avif",
+    "pexels-photo-15800367.avif",
+    "pexels-photo-29269654.avif",
+    "pexels-photo-29497982.avif",
+    "pexels-photo-34046801.avif",
+    "pexels-photo-34932738.avif",
+    "pexels-photo-6048537.avif",
+    "pexels-photo-6189901.avif",
+    "pexels-photo-8472242.avif"
+  ];
+
+  rows.forEach(function (row, index) {
+    const name = row.querySelector("h3");
+    if (!name) return;
+
+    const preview = document.createElement("div");
+    preview.className = "menu-photo-preview";
+    preview.setAttribute("aria-hidden", "true");
+
+    const photo = document.createElement("img");
+    photo.src = "/images/" + photos[index % photos.length];
+    photo.alt = name.textContent + " served at Kape-ling Cafe";
+    photo.loading = "lazy";
+
+    const caption = document.createElement("span");
+    caption.textContent = name.textContent;
+
+    preview.append(photo, caption);
+    row.appendChild(preview);
+    name.tabIndex = 0;
+    name.setAttribute("aria-label", name.textContent + ". Hover or focus to see a photo.");
   });
 }
