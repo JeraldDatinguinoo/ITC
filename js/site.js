@@ -2,7 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   addLoadingScreen();
-  setupPageTransitions();
   setupAccountModal();
   showCommunityExamples();
 });
@@ -25,29 +24,6 @@ function addLoadingScreen() {
 
   if (document.readyState === "complete") hideScreen();
   else window.addEventListener("load", hideScreen, { once: true });
-}
-
-// Add a soft fade when moving between pages.
-function setupPageTransitions() {
-  document.body.classList.add("page-enter");
-  requestAnimationFrame(function () {
-    document.body.classList.add("page-ready");
-  });
-
-  document.querySelectorAll('a[href]').forEach(function (link) {
-    const url = new URL(link.href, window.location.href);
-    if (url.origin !== window.location.origin || link.target || link.hasAttribute("download")) return;
-
-    link.addEventListener("click", function (event) {
-      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      if (url.pathname === window.location.pathname) return;
-
-      event.preventDefault();
-      document.body.classList.remove("page-ready");
-      document.body.classList.add("page-leave");
-      setTimeout(function () { window.location.href = url.href; }, 220);
-    });
-  });
 }
 
 // This login window is a design preview. It does not connect to an account system.
@@ -151,7 +127,9 @@ function showCommunityExamples() {
       comments: [
         ["Paolo Reyes", "HAHA congrats!! Ilang kape inabot niyo?"],
         ["Mika Santos", "Two Spanish lattes and one mini breakdown. sulit naman 😭"],
-        ["Ana Cruz", "Deserve mo yan. Libre mo kami pag defense na 😂"]
+        ["Ana Cruz", "Deserve mo yan. Libre mo kami pag defense na 😂"],
+        ["Jules Garcia", "Ako nga hanggang title page pa lang, proud ako sayo beh HAHAHA"],
+        ["Bea Mendoza", "Treat yourself muna. deserve na deserve!"]
       ]
     },
     {
@@ -162,7 +140,9 @@ function showCommunityExamples() {
       comments: [
         ["Mika Santos", "Tried it last week! Strong siya pero hindi naman lasang gamot HAHA"],
         ["Jules Garcia", "Can confirm. Umorder ako niyan tapos naglinis pa ako ng buong kwarto at 11pm 😭"],
-        ["Paolo Reyes", "Okay sold. kailangan ko yan for tonight's review"]
+        ["Paolo Reyes", "Okay sold. kailangan ko yan for tonight's review"],
+        ["Carlo Dizon", "Bro wag mo lang inumin nang 10pm tapos magtaka ka bakit 3am gising ka pa 😂"],
+        ["Nica Flores", "Add mo konting syrup if ayaw mo masyadong bitter!"]
       ]
     },
     {
@@ -173,7 +153,24 @@ function showCommunityExamples() {
       comments: [
         ["Jules Garcia", "PAGE 2 GANG 😭😭"],
         ["Mika Santos", "HAHA take five muna. Hindi naman tayo hinahabol ng notes"],
-        ["Ana Cruz", "Fine. coffee break muna. kayo may kasalanan nito 😂"]
+        ["Ana Cruz", "Fine. coffee break muna. kayo may kasalanan nito 😂"],
+        ["Renz Villanueva", "At least may progress. ako bukas pa lang magsisimula (sana)"],
+        ["Bea Mendoza", "Same energy sa buong semester HAHAHA"]
+      ]
+    },
+    {
+      name: "Nica Flores",
+      date: "Yesterday · 2:18 PM",
+      content: "Question lang... worth it pa ba mag first move? We've been talking for months pero ako lagi nauuna mag-chat. Baka delulu lang ako dito HAHAHA 😭",
+      likes: 24,
+      comments: [
+        ["Bea Mendoza", "Girl, gets kita 😭 pero dapat hindi ikaw lang lagi nag-eeffort."],
+        ["Carlo Dizon", "Try mo muna wag mag-chat for a bit. See if they reach out too."],
+        ["Mika Santos", "Not to be dramatic pero deserve mo rin ma-miss at kamustahin HAHAHA"],
+        ["Jules Garcia", "First move is okay, pero don't make a home sa mixed signals beh."],
+        ["Paolo Reyes", "As a guy, if interested yan, gagawa yan ng paraan. Not always perfect pero may effort dapat."],
+        ["Nica Flores", "Aray naman sa mixed signals 😭 pero thank you guys. noted yan."],
+        ["Ana Cruz", "Coffee tayo later. Kwento mo lahat, walang judgment dito 🤎"]
       ]
     }
   ];
