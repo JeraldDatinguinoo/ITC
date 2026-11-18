@@ -1454,3 +1454,59 @@ body.page-leave {
     transition:none;
   }
 }
+
+
+/* Make ordering actions easy to notice on every menu item */
+.menu-order-options {
+  display:flex !important;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px 18px;
+  margin:0 0 18px;
+  padding:12px 14px;
+  background:#fffdf9;
+  border:1px solid #d8cbbd;
+}
+.menu-order-option {
+  display:flex !important;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  color:#38251d;
+  font-size:12px;
+}
+.menu-order-option .add-order-button {
+  display:inline-block !important;
+  min-height:34px;
+  padding:8px 13px;
+  border:1px solid #a64f35;
+  background:#a64f35;
+  color:#fff8ed;
+  font-weight:bold;
+  cursor:pointer;
+}
+.menu-order-option .add-order-button:hover {
+  background:#38251d;
+  border-color:#38251d;
+}
+.loading-screen {
+  display:grid !important;
+  opacity:1;
+  visibility:visible;
+}
+.loading-screen.loading-done {
+  opacity:0;
+  visibility:hidden;
+}
+.post-comments {
+  display:block !important;
+  margin-top:8px;
+  padding:10px 12px;
+  background:#faf6f0;
+  border-left:2px solid #b18a4b;
+}
+.post-comments p {
+  display:block;
+  margin:6px 0;
+  line-height:1.5;
+}
