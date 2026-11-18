@@ -1176,3 +1176,223 @@ h1 em,h2 em {
     scroll-behavior:auto;
   }
 }
+
+
+/* Loading screen */
+.loading-screen {
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:grid;
+  place-items:center;
+  background:#faf6f0;
+  transition:opacity .45s ease,visibility .45s ease;
+}
+.loading-screen.loading-done {
+  opacity:0;
+  visibility:hidden;
+}
+.loading-content { text-align:center; }
+.coffee-animation { position:relative; width:112px; height:112px; margin:0 auto 12px; }
+.coffee-cup {
+  position:absolute;
+  left:25px;
+  bottom:17px;
+  width:58px;
+  height:43px;
+  border:3px solid #38251d;
+  border-radius:5px 5px 18px 18px;
+  background:#a64f35;
+}
+.coffee-cup:after {
+  content:"";
+  position:absolute;
+  right:-17px;
+  top:7px;
+  width:15px;
+  height:19px;
+  border:3px solid #38251d;
+  border-left:0;
+  border-radius:0 12px 12px 0;
+}
+.coffee-cup span {
+  position:absolute;
+  left:5px;
+  right:5px;
+  top:5px;
+  height:3px;
+  border-radius:50%;
+  background:#fff8ed;
+}
+.cup-saucer {
+  position:absolute;
+  left:17px;
+  bottom:10px;
+  width:78px;
+  height:5px;
+  border-radius:50%;
+  background:#38251d;
+}
+.steam {
+  position:absolute;
+  bottom:67px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#b18a4b;
+  opacity:0;
+  animation:steam-rise 1.25s infinite ease-out;
+}
+.steam-one { left:39px; animation-delay:0s; }
+.steam-two { left:54px; animation-delay:.28s; }
+.steam-three { left:69px; animation-delay:.56s; }
+@keyframes steam-rise {
+  0% { opacity:0; transform:translateY(12px) scale(.55); }
+  35% { opacity:1; }
+  100% { opacity:0; transform:translateY(-35px) scale(1.25); }
+}
+.loading-brand { margin:0; color:#38251d; font:600 25px Georgia,serif; }
+.loading-message { margin:5px 0 0; color:#a64f35; font:10px Courier New,monospace; letter-spacing:1.5px; }
+
+/* Account form and navigation */
+.account-nav-button {
+  border:1px solid #b18a4b;
+  background:transparent;
+  color:#fff8ed;
+  padding:8px 12px;
+  font-size:11px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.account-nav-button:hover { background:#a64f35; border-color:#a64f35; }
+.modal-open { overflow:hidden; }
+.account-modal {
+  position:fixed;
+  inset:0;
+  z-index:900;
+  display:none;
+  place-items:center;
+  padding:20px;
+  background:#1e1815b8;
+}
+.account-modal.modal-visible { display:grid; }
+.account-dialog {
+  position:relative;
+  width:min(460px,100%);
+  max-height:90vh;
+  overflow:auto;
+  padding:36px;
+  background:#faf6f0;
+  border:1px solid #b18a4b;
+  box-shadow:0 20px 70px #1e181555;
+}
+.modal-close {
+  position:absolute;
+  top:12px;
+  right:15px;
+  border:0;
+  background:transparent;
+  color:#38251d;
+  font-size:28px;
+  cursor:pointer;
+}
+.account-dialog h2 { margin:0 0 22px; color:#38251d; font-size:35px; line-height:1.1; }
+.account-tabs { display:flex; gap:8px; border-bottom:1px solid #d8cbbd; margin-bottom:18px; }
+.account-tab {
+  border:0;
+  border-bottom:2px solid transparent;
+  padding:10px 14px;
+  background:transparent;
+  color:#75665b;
+  cursor:pointer;
+}
+.account-tab.active { border-color:#a64f35; color:#38251d; font-weight:bold; }
+.account-form { display:grid; gap:13px; }
+.account-form label { display:grid; gap:6px; color:#38251d; font-size:12px; font-weight:bold; }
+.account-form input,.community-post-form textarea,.comment-form input {
+  width:100%;
+  border:1px solid #d8cbbd;
+  border-radius:0;
+  padding:11px 12px;
+  background:#fffdf9;
+  color:#1e1815;
+}
+.account-form label small { color:#75665b; font-size:10px; font-weight:normal; }
+.account-form [hidden],.community-post-form[hidden],.community-login-prompt[hidden] { display:none!important; }
+.account-submit { width:100%; margin-top:5px; }
+.account-message,.form-feedback { min-height:18px; margin:0 0 8px; color:#a64f35; font-size:12px; }
+.account-note { margin:18px 0 0; color:#75665b; font-size:10px; line-height:1.6; }
+.signed-in-name { color:#75665b; font-size:14px; }
+
+/* Tambayan posts, comments, and reactions */
+.tambayan-board { padding-top:65px; padding-bottom:72px; border-top:1px solid #d8cbbd; }
+.tambayan-heading { max-width:650px; margin-bottom:25px; }
+.tambayan-heading h2 { margin:0 0 8px; color:#38251d; font-size:clamp(34px,4vw,48px); }
+.tambayan-heading>p:last-child { color:#75665b; font-size:13px; }
+.community-login-prompt { padding:16px 18px; background:#eee4d7; color:#5d4c40; font-size:13px; }
+.text-button { border:0; border-bottom:1px solid #a64f35; padding:0 0 2px; background:transparent; color:#a64f35; font-weight:bold; cursor:pointer; }
+.community-post-form { padding:22px; background:#eee4d7; border:1px solid #d8cbbd; }
+.community-post-form label { display:block; margin-bottom:8px; color:#38251d; font:12px Courier New,monospace; }
+.community-post-form textarea { resize:vertical; min-height:90px; }
+.post-form-bottom { display:flex; justify-content:space-between; align-items:center; gap:15px; margin-top:12px; }
+.post-form-bottom small { color:#75665b; font-size:10px; }
+.community-feed { display:grid; gap:16px; margin-top:22px; }
+.empty-feed { padding:25px; border:1px dashed #d8cbbd; color:#75665b; text-align:center; font-size:13px; }
+.community-post { padding:22px; background:#fffdf9; border:1px solid #d8cbbd; }
+.post-author { display:flex; justify-content:space-between; gap:15px; align-items:center; }
+.post-author strong { color:#38251d; font:600 17px Georgia,serif; }
+.post-author small { color:#75665b; font:10px Courier New,monospace; }
+.post-content { margin:16px 0; color:#38251d; white-space:pre-wrap; overflow-wrap:anywhere; }
+.post-actions { display:flex; align-items:center; gap:18px; padding:10px 0; border-top:1px solid #eee4d7; color:#75665b; font-size:11px; }
+.reaction-button { border:0; background:transparent; color:#75665b; cursor:pointer; }
+.reaction-button.reacted { color:#a64f35; font-weight:bold; }
+.post-comments { padding:4px 0; }
+.post-comments p { margin:5px 0; color:#75665b; font-size:12px; overflow-wrap:anywhere; }
+.post-comments strong { color:#38251d; }
+.comment-form { display:flex; gap:8px; margin-top:12px; }
+.comment-form input { min-width:0; font-size:12px; }
+.comment-form button { padding:8px 12px; border:1px solid #38251d; background:#38251d; color:#fff8ed; font-size:11px; cursor:pointer; }
+
+/* Menu ordering controls and cart */
+.menu-order-options { display:flex; flex-wrap:wrap; gap:12px 22px; padding:8px 0 13px 0; border-bottom:1px dotted #d6c8b9; }
+.menu-order-option { display:flex; align-items:center; gap:9px; color:#75665b; font-size:10px; }
+.menu-order-option button {
+  width:25px;
+  height:25px;
+  border:1px solid #b18a4b;
+  background:#fffdf9;
+  color:#38251d;
+  font-size:17px;
+  line-height:1;
+  cursor:pointer;
+}
+.menu-order-option button:hover { background:#38251d; color:#fff8ed; }
+.item-quantity { min-width:12px; text-align:center; color:#38251d; font:12px Courier New,monospace; }
+.order-cart { margin-top:40px; padding:28px; background:#eee4d7; border:1px solid #d8cbbd; }
+.cart-heading { display:flex; align-items:end; justify-content:space-between; gap:15px; }
+.cart-heading h2 { margin:0; color:#38251d; font-size:34px; }
+.cart-count { color:#75665b; font:10px Courier New,monospace; }
+.cart-items { margin:18px 0; border-top:1px solid #d8cbbd; }
+.cart-empty { padding:15px 0; margin:0; color:#75665b; font-size:12px; }
+.cart-line { display:flex; justify-content:space-between; gap:18px; padding:12px 0; border-bottom:1px solid #d8cbbd; color:#5d4c40; font-size:12px; }
+.cart-line strong { color:#38251d; white-space:nowrap; }
+.cart-total { display:flex; justify-content:space-between; padding-top:15px; border-top:1px solid #c5b29e; color:#38251d; }
+.cart-total strong { font:600 20px Georgia,serif; }
+.clear-cart { margin-top:14px; padding:8px 12px; border:1px solid #a64f35; background:transparent; color:#a64f35; font-size:11px; cursor:pointer; }
+.clear-cart:disabled { opacity:.4; cursor:not-allowed; }
+.cart-note { margin:14px 0 0; color:#75665b; font-size:10px; }
+
+@media(max-width:800px) {
+  .account-nav-button { padding:7px 9px; }
+}
+@media(max-width:560px) {
+  .account-dialog { padding:30px 22px; }
+  .post-form-bottom { align-items:flex-start; flex-direction:column; }
+  .community-post-form { padding:16px; }
+  .community-post { padding:16px; }
+  .post-author { align-items:flex-start; flex-direction:column; gap:4px; }
+  .order-cart { padding:20px; }
+  .menu-order-options { gap:8px 12px; }
+  .menu-order-option { gap:6px; }
+  .cart-heading h2 { font-size:28px; }
+}
