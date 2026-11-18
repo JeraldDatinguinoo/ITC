@@ -1400,3 +1400,48 @@ body.page-leave {
 }
 
 
+
+
+/* Show the loader before revealing any page content. */
+html.loading-active body > :not(.loading-screen) {
+  visibility:hidden;
+}
+html.loading-active .loading-screen {
+  visibility:visible;
+}
+html.loading-active {
+  overflow:hidden;
+}
+
+/* Give the sample Tambayan replies a more natural chat-like layout. */
+.post-comments {
+  display:grid;
+  gap:10px;
+  padding:14px;
+}
+.comments-heading {
+  margin-bottom:2px;
+}
+.comment-line {
+  width:fit-content;
+  max-width:94%;
+  padding:9px 12px;
+  background:#fffdf9;
+  border:1px solid #eee4d7;
+}
+.comment-line strong {
+  display:block;
+  margin-bottom:3px;
+  color:#38251d;
+  font-size:11px;
+}
+.comment-line p {
+  margin:0;
+  color:#5d4c40;
+  font-size:12px;
+  line-height:1.55;
+}
+.comment-line:nth-of-type(odd) {
+  margin-left:18px;
+  background:#eee4d7;
+}
