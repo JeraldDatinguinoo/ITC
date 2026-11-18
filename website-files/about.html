@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>document.documentElement.classList.add("loading-active");</script>
+  
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The story and spirit behind Kape-ling Cafe in Batangas City.">
   <meta name="theme-color" content="#faf6f0">
@@ -10,15 +10,7 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<div class="loading-screen" role="status" aria-label="Loading Kape-ling Cafe">
-  <div class="loading-content">
-    <div class="coffee-animation" aria-hidden="true">
-      <span class="steam steam-one"></span>
-      <span class="steam steam-two"></span>
-      <span class="steam steam-three"></span>
-      <div class="coffee-cup"><span></span></div>
-      <div class="cup-saucer"></div>
-    </div>
+
     <p class="loading-brand">Kape-ling Cafe</p>
     <p class="loading-message">Brewing something good</p>
   </div>
@@ -35,7 +27,7 @@
       <a href="/menu">Menu</a>
       <a href="/community">The tambayan</a>
       <a href="/contact">Find us</a>
-    </nav>
+    <a class="account-nav-button" href="#login-modal">Log in</a></nav>
   </div>
 </header>
 <main>
@@ -56,8 +48,8 @@
     <article><span>03 / THE COMPANY</span><h2>Stay for a while.</h2><p>A good table can hold a study session, a catch-up, or a quiet moment to yourself.</p></article>
   </div></div></section>
   <section class="quote-section section-wrap"><p>“Kape muna. The rest can wait a little.”</p><span>ISANG KAPE-LING PAALALA</span></section>
-</main>
+</main><div class="account-modal" id="login-modal"><div class="account-dialog"><a class="modal-close" href="#">×</a><p class="eyebrow">WELCOME TO THE TAMBAYAN</p><h2>Good to have you <em>here.</em></h2><div class="account-tabs"><a class="account-tab active" href="#login-modal">Log in</a><a class="account-tab" href="#signup-modal">Sign up</a></div><form class="account-form"><label>Email address<input type="email" placeholder="you@example.com"></label><label>Password<input type="password" placeholder="Enter your password"></label><button class="button account-submit" type="button">Log in</button></form><p class="account-note">Design preview only. Account sign-in is not connected.</p></div></div><div class="account-modal" id="signup-modal"><div class="account-dialog"><a class="modal-close" href="#">×</a><p class="eyebrow">WELCOME TO THE TAMBAYAN</p><h2>Make yourself <em>at home.</em></h2><div class="account-tabs"><a class="account-tab" href="#login-modal">Log in</a><a class="account-tab active" href="#signup-modal">Sign up</a></div><form class="account-form"><label>Full name<input type="text" placeholder="e.g. Juan Dela Cruz"></label><label>Email address<input type="email" placeholder="you@example.com"></label><label>Password<input type="password" placeholder="Create a password"></label><button class="button account-submit" type="button">Create account</button></form><p class="account-note">Design preview only. Account registration is not connected.</p></div></div>
 <footer class="site-footer"><div class="footer-inner"><div><a class="footer-brand" href="/">Kape-ling Cafe</a><p>P. Burgos Street, Poblacion, Batangas City</p><p>Mon–Sat 8:00 AM–9:00 PM · Sun 9:00 AM–7:00 PM</p></div><div class="footer-links"><a href="/about">Our story</a><a href="/menu">Menu</a><a href="/community">The tambayan</a><a href="/contact">Find us</a></div><small>© 2026 Kape-ling Cafe <span>· Website by the Kape-ling team</span></small></div></footer>
-<script src="/js/site.js?v=5"></script>
+
 </body>
 </html>
