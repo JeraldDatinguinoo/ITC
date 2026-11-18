@@ -2,11 +2,37 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   addLoadingScreen();
+  setupPageTransitions();
   addAccountButton();
   setupAccountForms();
   setupCommunity();
   setupMenuCart();
 });
+
+
+// Fade pages gently when visitors move between the cafe sections.
+function setupPageTransitions() {
+  document.body.classList.add("page-enter");
+  requestAnimationFrame(function () {
+    document.body.classList.add("page-ready");
+  });
+
+  document.querySelectorAll('a[href]').forEach(function (link) {
+    const url = new URL(link.href, window.location.href);
+    if (url.origin !== window.location.origin || link.target || link.hasAttribute("download")) return;
+    link.addEventListener("click", function (event) {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (url.pathname === window.location.pathname && url.hash) return;
+      if (url.pathname === window.location.pathname && !url.hash) return;
+      event.preventDefault();
+      document.body.classList.remove("page-ready");
+      document.body.classList.add("page-leave");
+      setTimeout(function () {
+        window.location.href = url.href;
+      }, 220);
+    });
+  });
+}
 
 // Show the coffee animation while the page finishes loading.
 function addLoadingScreen() {
@@ -276,7 +302,48 @@ function setupCommunity() {
 
 function getPosts() {
   try {
-    return JSON.parse(localStorage.getItem("kapeLingPosts") || "[]");
+    const savedPosts = localStorage.getItem("kapeLingPosts");
+    if (savedPosts) return JSON.parse(savedPosts);
+
+    const examples = [
+      {
+        id: "sample-1",
+        name: "Mika Santos",
+        email: "sample-mika",
+        content: "Finally finished our group project! A Spanish latte is definitely deserved after that.",
+        date: "Community example",
+        comments: [
+          { name: "Paolo Reyes", text: "Congrats! You earned that coffee." },
+          { name: "Ana Cruz", text: "Same here. Deadlines are no joke!" }
+        ],
+        reactions: ["sample-paolo", "sample-ana", "sample-jules"]
+      },
+      {
+        id: "sample-2",
+        name: "Paolo Reyes",
+        email: "sample-paolo",
+        content: "Any recommendations for someone who wants a strong coffee but not too sweet?",
+        date: "Community example",
+        comments: [
+          { name: "Mika Santos", text: "Try the Americano. Simple and strong." },
+          { name: "Jules Garcia", text: "Kapeng Barako is worth trying too." }
+        ],
+        reactions: ["sample-mika", "sample-ana"]
+      },
+      {
+        id: "sample-3",
+        name: "Ana Cruz",
+        email: "sample-ana",
+        content: "Study reminder: take a short break, drink some water, and don't forget to rest.",
+        date: "Community example",
+        comments: [
+          { name: "Jules Garcia", text: "Needed this reminder today. Thank you!" }
+        ],
+        reactions: ["sample-mika", "sample-paolo"]
+      }
+    ];
+    localStorage.setItem("kapeLingPosts", JSON.stringify(examples));
+    return examples;
   } catch (error) {
     return [];
   }
@@ -475,13 +542,14 @@ function setupMenuCart() {
       const quantity = document.createElement("span");
       quantity.className = "item-quantity";
       quantity.textContent = "0";
-      const plus = document.createElement("button");
-      plus.type = "button";
-      plus.textContent = "+";
-      plus.setAttribute("aria-label", "Add one " + option.name);
+      const addButton = document.createElement("button");
+      addButton.type = "button";
+      addButton.className = "add-order-button";
+      addButton.textContent = "Add to order";
+      addButton.setAttribute("aria-label", "Add one " + option.name + " to your order");
       minus.addEventListener("click", function () { changeCartItem(option, -1); });
-      plus.addEventListener("click", function () { changeCartItem(option, 1); });
-      item.append(label, minus, quantity, plus);
+      addButton.addEventListener("click", function () { changeCartItem(option, 1); });
+      item.append(label, minus, quantity, addButton);
       controls.appendChild(item);
       option.quantityElement = quantity;
     });
