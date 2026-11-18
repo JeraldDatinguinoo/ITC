@@ -458,6 +458,10 @@ function setupMenuCart() {
     if (!options.length) return;
     const controls = document.createElement("div");
     controls.className = "menu-order-options";
+    const orderLabel = document.createElement("span");
+    orderLabel.className = "order-label";
+    orderLabel.textContent = "ADD TO CART";
+    controls.appendChild(orderLabel);
     options.forEach(function (option) {
       const item = document.createElement("div");
       item.className = "menu-order-option";
