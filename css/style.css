@@ -1178,85 +1178,6 @@ h1 em,h2 em {
 }
 
 
-/* Loading screen */
-.loading-screen {
-  position:fixed;
-  inset:0;
-  width:100vw;
-  height:100vh;
-  height:100dvh;
-  z-index:1000;
-  display:grid;
-  place-items:center;
-  background:#faf6f0;
-  transition:opacity .45s ease,visibility .45s ease;
-}
-.loading-screen.loading-done {
-  opacity:0;
-  visibility:hidden;
-}
-.loading-content { text-align:center; }
-.coffee-animation { position:relative; width:112px; height:112px; margin:0 auto 12px; }
-.coffee-cup {
-  position:absolute;
-  left:25px;
-  bottom:17px;
-  width:58px;
-  height:43px;
-  border:3px solid #38251d;
-  border-radius:5px 5px 18px 18px;
-  background:#a64f35;
-}
-.coffee-cup:after {
-  content:"";
-  position:absolute;
-  right:-17px;
-  top:7px;
-  width:15px;
-  height:19px;
-  border:3px solid #38251d;
-  border-left:0;
-  border-radius:0 12px 12px 0;
-}
-.coffee-cup span {
-  position:absolute;
-  left:5px;
-  right:5px;
-  top:5px;
-  height:3px;
-  border-radius:50%;
-  background:#fff8ed;
-}
-.cup-saucer {
-  position:absolute;
-  left:17px;
-  bottom:10px;
-  width:78px;
-  height:5px;
-  border-radius:50%;
-  background:#38251d;
-}
-.steam {
-  position:absolute;
-  bottom:67px;
-  width:9px;
-  height:9px;
-  border-radius:50%;
-  background:#b18a4b;
-  opacity:0;
-  animation:steam-rise 1.25s infinite ease-out;
-}
-.steam-one { left:39px; animation-delay:0s; }
-.steam-two { left:54px; animation-delay:.28s; }
-.steam-three { left:69px; animation-delay:.56s; }
-@keyframes steam-rise {
-  0% { opacity:0; transform:translateY(12px) scale(.55); }
-  35% { opacity:1; }
-  100% { opacity:0; transform:translateY(-35px) scale(1.25); }
-}
-.loading-brand { margin:0; color:#38251d; font:600 25px Georgia,serif; }
-.loading-message { margin:5px 0 0; color:#a64f35; font:10px Courier New,monospace; letter-spacing:1.5px; }
-
 /* Account form and navigation */
 .account-nav-button {
   border:1px solid #b18a4b;
@@ -1269,7 +1190,7 @@ h1 em,h2 em {
 }
 .account-nav-button:hover { background:#a64f35; border-color:#a64f35; }
 .modal-open { overflow:hidden; }
-.account-modal {
+ .account-modal {
   position:fixed;
   inset:0;
   z-index:1100;
@@ -1282,7 +1203,7 @@ h1 em,h2 em {
   padding:16px;
   background:#1e1815b8;
 }
-.account-modal.modal-visible { display:grid; }
+.account-modal:target { display:grid; }
 .account-dialog {
   position:relative;
   width:min(460px,100%);
@@ -1402,18 +1323,7 @@ body.page-leave {
 
 
 
-/* Show the loader before revealing any page content. */
-html.loading-active body > :not(.loading-screen) {
-  visibility:hidden;
-}
-html.loading-active .loading-screen {
-  visibility:visible;
-}
-html.loading-active {
-  overflow:hidden;
-}
-
-/* Give the sample Tambayan replies a more natural chat-like layout. */
+/* Static Tambayan conversation layout. */
 .post-comments {
   display:grid;
   gap:10px;
@@ -1570,3 +1480,9 @@ body.page-leave {
     transition:none;
   }
 }
+
+.account-modal { display:none; }
+.account-modal:target { display:grid; }
+.menu-jump-links { display:flex; flex-wrap:wrap; gap:10px 22px; padding:15px 0; border-bottom:1px solid #d8cbbd; }
+.menu-jump-links a { color:#a64f35; font:11px Courier New,monospace; border-bottom:1px solid #b18a4b; padding-bottom:4px; }
+.menu-category { scroll-margin-top:20px; }
