@@ -1486,3 +1486,30 @@ body.page-leave {
 .menu-jump-links { display:flex; flex-wrap:wrap; gap:10px 22px; padding:15px 0; border-bottom:1px solid #d8cbbd; }
 .menu-jump-links a { color:#a64f35; font:11px Courier New,monospace; border-bottom:1px solid #b18a4b; padding-bottom:4px; }
 .menu-category { scroll-margin-top:20px; }
+
+
+/* Keep the Log in link fully visible inside the navigation. */
+.main-nav a.account-nav-button {
+  display:inline-flex;
+  flex:0 0 auto;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:8px 16px;
+  border:1px solid #b18a4b;
+  border-radius:2px;
+  line-height:1.2;
+  white-space:nowrap;
+}
+.main-nav a.account-nav-button:hover,
+.main-nav a.account-nav-button:focus-visible {
+  color:#fff8ed;
+  background:#a64f35;
+  border-color:#a64f35;
+}
+@media(max-width:560px) {
+  .main-nav a.account-nav-button {
+    padding:8px 14px;
+    margin-right:4px;
+  }
+}
