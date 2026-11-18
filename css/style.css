@@ -1396,3 +1396,5 @@ h1 em,h2 em {
   .menu-order-option { gap:6px; }
   .cart-heading h2 { font-size:28px; }
 }
+
+.order-label { width:100%; color:#a64f35; font:9px Courier New,monospace; letter-spacing:1px; }
