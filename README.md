@@ -56,11 +56,10 @@ The website follows a warm coffee-inspired color palette.
 
 ## Features
 
-- Animated coffee-cup loading screen with rising steam.
-- Sign-up and log-in forms with checks for names, email addresses, and passwords.
-- Tambayan posts, comments, and like reactions.
-- Menu quantity buttons and a live cart total.
-- Responsive pages for desktop and mobile.
+- CSS-based page styling and responsive layouts for desktop and mobile.
+- A visual-only log-in panel.
+- Static sample posts and comments in the Tambayan section.
+- Menu categories with CSS hover previews.
 
 ## Built With
 
@@ -82,8 +81,6 @@ ITC/
 │   └── contact.html
 ├── css/
 │   └── style.css
-├── js/
-│   └── site.js
 ├── images/
 │   ├── README.md
 │   └── cafe photos (.avif)
@@ -107,11 +104,11 @@ You can preview the website on your computer with a local server:
 
 4. Open [http://localhost:8000/website-files/](http://localhost:8000/website-files/) in your browser.
 
-The website uses root-relative paths for its CSS, JavaScript, and images, so running it through a local server from the project folder is recommended instead of opening the HTML file directly.
+The website uses root-relative paths for its CSS and images, so running it through a local server from the project folder is recommended instead of opening the HTML file directly.
 
 ## Demo Limitations
 
-The account system, community posts, comments, reactions, and cart are front-end demonstrations. Account details and community activity are saved in the current browser only. They are not shared between devices, and there is no server-side authentication, database, payment, or order submission. Do not use a real password or sensitive personal information on this demo site.
+The log-in panel and community comment area are visual demonstrations only. They do not authenticate users, submit comments, save activity, or connect to a database. The menu does not process orders or payments.
 
 ## Live Website
 
