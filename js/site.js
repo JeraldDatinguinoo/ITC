@@ -7,29 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
   showCommunityExamples();
 });
 
-// Keep the loading animation centered in the visitor's screen.
+// Use the loading screen already written in the HTML so it appears before the page.
 function addLoadingScreen() {
-  const screen = document.createElement("div");
-  screen.className = "loading-screen";
-  screen.innerHTML = `
-    <div class="loading-content">
-      <div class="coffee-animation" aria-hidden="true">
-        <span class="steam steam-one"></span>
-        <span class="steam steam-two"></span>
-        <span class="steam steam-three"></span>
-        <div class="coffee-cup"><span></span></div>
-        <div class="cup-saucer"></div>
-      </div>
-      <p class="loading-brand">Kape-ling Cafe</p>
-      <p class="loading-message">Brewing something good</p>
-    </div>`;
-  document.body.prepend(screen);
+  const screen = document.querySelector(".loading-screen");
+  if (!screen) {
+    document.documentElement.classList.remove("loading-active");
+    return;
+  }
 
   function hideScreen() {
     setTimeout(function () {
       screen.classList.add("loading-done");
+      document.documentElement.classList.remove("loading-active");
       setTimeout(function () { screen.remove(); }, 500);
-    }, 1200);
+    }, 900);
   }
 
   if (document.readyState === "complete") hideScreen();
@@ -155,23 +146,35 @@ function showCommunityExamples() {
     {
       name: "Mika Santos",
       date: "Today · 10:24 AM",
-      content: "Finally finished our group project! A Spanish latte is definitely deserved after that.",
+      content: "Finally submitted our research 😭 I don't want to hear the words “Chapter 4” for at least a week.",
       likes: 12,
-      comments: [["Paolo Reyes", "Congrats! You earned that coffee."], ["Ana Cruz", "Same here. Deadlines are no joke!"]]
+      comments: [
+        ["Paolo Reyes", "HAHA congrats!! Ilang kape inabot niyo?"],
+        ["Mika Santos", "Two Spanish lattes and one mini breakdown. sulit naman 😭"],
+        ["Ana Cruz", "Deserve mo yan. Libre mo kami pag defense na 😂"]
+      ]
     },
     {
       name: "Paolo Reyes",
       date: "Today · 9:10 AM",
-      content: "Any recommendations for someone who wants a strong coffee but not too sweet?",
+      content: "May nakatikim na ba ng Kapeng Barako Cold Brew? Gising na gising ba talaga or masyadong mapait?",
       likes: 8,
-      comments: [["Mika Santos", "Try the Americano. Simple and strong."], ["Jules Garcia", "Kapeng Barako is worth trying too."]]
+      comments: [
+        ["Mika Santos", "Tried it last week! Strong siya pero hindi naman lasang gamot HAHA"],
+        ["Jules Garcia", "Can confirm. Umorder ako niyan tapos naglinis pa ako ng buong kwarto at 11pm 😭"],
+        ["Paolo Reyes", "Okay sold. kailangan ko yan for tonight's review"]
+      ]
     },
     {
       name: "Ana Cruz",
       date: "Yesterday · 4:35 PM",
-      content: "Study reminder: take a short break, drink some water, and don't forget to rest.",
+      content: "Sabi ko one hour lang ako mag-aaral. Three hours na, page 2 pa rin ako. Please tell me hindi lang ako 😭",
       likes: 16,
-      comments: [["Jules Garcia", "Needed this reminder today. Thank you!"]]
+      comments: [
+        ["Jules Garcia", "PAGE 2 GANG 😭😭"],
+        ["Mika Santos", "HAHA take five muna. Hindi naman tayo hinahabol ng notes"],
+        ["Ana Cruz", "Fine. coffee break muna. kayo may kasalanan nito 😂"]
+      ]
     }
   ];
 
@@ -208,10 +211,13 @@ function showCommunityExamples() {
     comments.appendChild(heading);
 
     post.comments.forEach(function (comment) {
-      const line = document.createElement("p");
+      const line = document.createElement("div");
+      line.className = "comment-line";
       const commenter = document.createElement("strong");
-      commenter.textContent = comment[0] + ": ";
-      line.append(commenter, document.createTextNode(comment[1]));
+      commenter.textContent = comment[0];
+      const message = document.createElement("p");
+      message.textContent = comment[1];
+      line.append(commenter, message);
       comments.appendChild(line);
     });
 
