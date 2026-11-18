@@ -126,6 +126,7 @@ function openAccountModal() {
   document.body.classList.add("modal-open");
   const current = getCurrentUser();
   if (current) showAccountDetails(modal, current);
+  else showAccountFormAgain();
 }
 
 function closeAccountModal() {
@@ -481,6 +482,7 @@ function setupMenuCart() {
     options.forEach(function (option) {
       const item = document.createElement("div");
       item.className = "menu-order-option";
+      item.dataset.cartKey = option.name + "|" + option.size;
       const label = document.createElement("span");
       label.textContent = option.size + " · ₱" + option.price;
       const minus = document.createElement("button");
@@ -531,9 +533,7 @@ function changeCartItem(option, amount) {
 
 function updateMenuQuantities() {
   document.querySelectorAll(".menu-order-option").forEach(function (element) {
-    const label = element.querySelector("span").textContent;
-    const parts = label.split(" · ");
-    const key = element.closest(".price-row")?.querySelector("h3")?.textContent.trim() + "|" + parts[0];
+    const key = element.dataset.cartKey;
     const quantity = cartItems[key] ? cartItems[key].quantity : 0;
     element.querySelector(".item-quantity").textContent = quantity;
   });
