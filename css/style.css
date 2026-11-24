@@ -1513,3 +1513,35 @@ body.page-leave {
     margin-right:4px;
   }
 }
+
+
+/* Website typography */
+body,button,input,textarea,select {
+  font-family:Arial,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,
+.brand-name,.footer-brand,
+.opening-quote,.handwritten-note,.contact-map p,
+.post-author strong {
+  font-family:Georgia,serif;
+}
+
+small,
+.eyebrow,
+.photo-stamp,
+.hero-visit span,.hero-visit small,
+.menu-number,
+.home-menu-row strong,
+.hours-panel strong,.hours-panel small,
+.purpose-grid article>span,
+.quote-section span,
+.menu-masthead-note p,.round-stamp,
+.board-topline,.category-heading>span,
+.price-head,.price-row>b,.menu-tag,
+.addon-list b,.contact-detail>span,.contact-detail small,
+.contact-map>span,.contact-map a,
+.site-footer small,.post-author small,.comments-heading,
+.menu-jump-links a {
+  font-family:"Courier New",monospace;
+}
