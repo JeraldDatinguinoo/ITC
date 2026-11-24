@@ -111,8 +111,13 @@ h1,h2,h3 {
 }
 
 h1 em,h2 em {
-  color:#a64f35;
+  color:inherit;
   font-weight:500;
+}
+
+/* Reserve the accent color for the main hero heading. */
+.hero-copy h1 em {
+  color:#a64f35;
 }
 
 .home-hero {
